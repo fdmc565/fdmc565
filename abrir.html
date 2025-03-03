@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carta Especial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        .carta {
+            background-color: #111;
+            border: 3px solid #ff69b4;
+            padding: 30px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+            position: relative;
+            border-radius: 15px;
+        }
+        h2 {
+            color: #ff69b4;
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .boton-abrir {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin: 15px 0;
+        }
+        .boton-abrir:hover {
+            background-color: #ff1493;
+        }
+        .contenido {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 14px;
+            color: #ffccff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carta">
+    <h2>¡Carta Cerrada!</h2>
+    <p>Tengo algo especial para ti, ábrelo aquí:</p>
+    <a href="carta.html" class="boton-abrir">Abrir Aquí</a>
+    <div class="contenido">
+        Esto es contenido, espero que te guste, es solo para ti.
+    </div>
+</div>
+
+</body>
+</html>
