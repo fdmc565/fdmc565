@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva para mi Amor</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Falta <span id="cuenta"></span> para tu cumpleaños</h1>
+        <p class="mensaje">
+            Mi deseo de este año es pasarla contigo ese día tan especial y hacerte feliz.
+        </p>
+
+        <div class="nota">
+            Para mañana aparecerá un botón debajo de este mensaje, donde te dará un mensaje que se actualizará diario, hasta la fecha destinada.  
+            <br><br>  
+            **Te amo.**
+        </div>
+
+        <div id="mensajeDiario" class="oculto">
+            <button onclick="mostrarMensaje()">💜 Mensaje Diario 💜</button>
+            <p id="mensajeTexto" class="mensaje-diario"></p>
+        </div>
+    </div>
+
+    <script>
+        // Fecha de cumpleaños (año actual para que funcione cada año)
+        const fechaCumple = new Date(new Date().getFullYear(), 2, 23).getTime();  // 2 es marzo (0 = enero)
+
+        function actualizarCuenta() {
+            const ahora = new Date().getTime();
+            const diferencia = fechaCumple - ahora;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("cuenta").innerText = `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+
+            // Mostrar botón al día siguiente
+            const hoy = new Date();
+            if (hoy.getDate() > 4) {
+                document.getElementById("mensajeDiario").classList.remove("oculto");
+            }
+        }
+
+        setInterval(actualizarCuenta, 1000);
+
+        function mostrarMensaje() {
+            const mensajes = [
+                "Hoy me desperté pensando en ti, te amo.",
+                "Cada día falta menos para celebrar juntos, mi amor.",
+                "Eres mi razón y mi sonrisa diaria.",
+                "Espero que este mensaje te haga sonreír.",
+                "Contando los días para abrazarte en tu cumpleaños."
+            ];
+
+            const hoy = new Date().getDate() % mensajes.length;
+            document.getElementById("mensajeTexto").innerText = mensajes[hoy];
+        }
+    </script>
+</body>
+</html>
