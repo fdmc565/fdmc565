@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Especial para Ti</title>
+    <link rel="stylesheet" href="nota-styles.css">
+</head>
+<body>
+    <div class="contenedor-nota">
+        <h1>Mi Nota de Hoy para Ti 💜</h1>
+        <p class="mensaje-nota" id="nota">
+            <!-- Aquí el texto se mostrará con el efecto -->
+        </p>
+    </div>
+
+    <script>
+        const textoNota = `
+        Mi preciosa Franchelis,
+
+        Cada día contigo es un regalo, y aunque el calendario avanza, mi amor por ti crece sin detenerse.
+        Hay tantas cosas que quiero decirte, tantos momentos que quiero compartir contigo, tantas risas, abrazos y sueños por cumplir juntos.
+
+        Eres mi persona favorita, mi lugar seguro y el motivo por el que sonrío cada día. No importa lo que pase, siempre estaré aquí, amándote con todo mi ser.
+
+        Falta menos para tu cumpleaños, pero cada día contigo ya es una celebración.
+
+        Te amo hoy, mañana y siempre.
+
+        Con todo mi corazón,
+        Tu Negro.
+        `;
+
+        let index = 0;
+        function escribirNota() {
+            const p = document.getElementById('nota');
+            if (index < textoNota.length) {
+                p.innerHTML += textoNota.charAt(index);
+                index++;
+                setTimeout(escribirNota, 40); // velocidad de aparición
+            }
+        }
+
+        window.onload = escribirNota;
+
+        // Corazones animados
+        function crearCorazon() {
+            const corazon = document.createElement('div');
+            corazon.classList.add('corazon');
+            corazon.style.left = Math.random() * 100 + 'vw';
+            corazon.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(corazon);
+
+            setTimeout(() => {
+                corazon.remove();
+            }, 5000);
+        }
+
+        setInterval(crearCorazon, 300);
+    </script>
+</body>
+</html>

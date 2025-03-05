@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva para mi Amor</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Falta <span id="cuenta"></span> para tu cumpleaños</h1>
+        <p class="mensaje">
+            Mi deseo de este año es pasarla contigo ese día tan especial y hacerte feliz.
+        </p>
+
+        <div class="nota">
+            <p>Haz clic abajo para leer la nota de hoy, escrita con mucho amor para ti:</p>
+            <a href="nota.html" class="boton-nota" target="_blank">Abrir nota del día</a>
+        </div>
+    </div>
+
+    <script>
+        // Fecha de cumpleaños (año actual)
+        const fechaCumple = new Date(new Date().getFullYear(), 2, 23).getTime();
+
+        function actualizarCuenta() {
+            const ahora = new Date().getTime();
+            const diferencia = fechaCumple - ahora;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("cuenta").innerText = `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+        }
+
+        setInterval(actualizarCuenta, 1000);
+    </script>
+</body>
+</html>

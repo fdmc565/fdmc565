@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand&display=swap');
+
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.contenedor {
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+    padding: 40px;
+    border: 3px solid #a64dff;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(166, 77, 255, 0.8);
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #a64dff;
+    text-shadow: 0 0 15px rgba(166, 77, 255, 0.8);
+}
+
+.mensaje {
+    font-size: 1.2em;
+    color: #ddd;
+    margin: 15px 0;
+}
+
+.nota {
+    margin-top: 20px;
+    font-style: italic;
+    color: #a64dff;
+    background: rgba(166, 77, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.boton-nota {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #a64dff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.boton-nota:hover {
+    background-color: #8c2aff;
+}
