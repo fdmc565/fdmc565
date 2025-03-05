@@ -1,87 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand&display=swap');
 
 body {
-    background-color: #0a0a0a;
+    background: radial-gradient(circle, #2c003e, #1a001f);
     color: #fff;
     font-family: 'Quicksand', sans-serif;
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: flex-start; /* Cambia a flex-start para que empiece arriba */
+    flex-direction: column;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Permitir que el contenedor crezca con el contenido */
+.contenedor-nota {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #a64dff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
     text-align: center;
-}
-
-.contenedor {
-    background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
-    padding: 40px;
-    border: 3px solid #a64dff;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(166, 77, 255, 0.8);
-    max-width: 500px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    box-shadow: 0 0 20px rgba(166, 77, 255, 0.8);
+    margin: 30px auto;
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 2em;
-    color: #a64dff;
-    text-shadow: 0 0 15px rgba(166, 77, 255, 0.8);
+    font-size: 2.5em;
+    color: #ff66cc;
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.8);
+    margin: 0 0 20px;
 }
 
-.mensaje {
-    font-size: 1.2em;
-    color: #ddd;
-    margin: 15px 0;
-}
-
-.nota {
-    margin-top: 20px;
-    font-style: italic;
-    color: #a64dff;
-    background: rgba(166, 77, 255, 0.15);
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 1em;
-}
-
-button {
-    background-color: #a64dff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #8c2aff;
-}
-
-.mensaje-diario {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #fff;
+.mensaje-nota {
     font-size: 1.1em;
-    background: rgba(166, 77, 255, 0.2);
-    padding: 10px;
-    border-radius: 10px;
+    line-height: 1.8;
+    color: #f1e1ff;
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+    white-space: pre-line;
+    overflow: hidden;
+    min-height: 200px;
+    padding-bottom: 30px;
 }
 
-.oculto {
-    display: none;
+/* Corazones Animados */
+.corazon {
+    position: fixed; /* Cambia a fixed para que caigan en toda la pantalla */
+    top: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff66cc;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 75%, 25% 100%, 0 35%);
+    animation: caer 5s linear infinite;
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Variación de tamaños */
+.corazon:nth-child(2n) {
+    width: 25px;
+    height: 25px;
+    background-color: #ff99cc;
 }
