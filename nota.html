@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota Especial para Ti</title>
     <link rel="stylesheet" href="nota-styles.css">
+    <style>
+        /* Estilo para el botón de música */
+        .boton-musica {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #b400ff;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: 'Dancing Script', cursive;
+            box-shadow: 0 0 15px rgba(180, 0, 255, 0.8);
+            z-index: 100;
+        }
+
+        .boton-musica:hover {
+            background-color: #e600ff;
+        }
+    </style>
 </head>
 <body>
     <div class="contenedor-nota">
@@ -13,6 +35,14 @@
             <!-- Aquí el texto se mostrará con el efecto -->
         </p>
     </div>
+
+    <!-- Botón para controlar la música -->
+    <button class="boton-musica" id="botonMusica" onclick="toggleMusica()">🎶 Reproducir audio</button>
+
+    <audio id="musica" loop>
+        <source src="c:\Users\fdmc5\Downloads\ElevenLabs_2025-03-06T13_59_00_karen_gen_s50_sb75_se0_b_m2.mp3" type="audio/mp3">
+        Tu navegador no soporta el audio.
+    </audio>
 
     <script>
         const textoNota = `
@@ -70,16 +100,34 @@
         `;
 
         let index = 0;
+
         function escribirNota() {
             const p = document.getElementById('nota');
+            if (index === 0) {
+                document.getElementById('musica').play(); // Inicia la música al empezar a escribir
+            }
             if (index < textoNota.length) {
                 p.innerHTML += textoNota.charAt(index);
                 index++;
-                setTimeout(escribirNota, 40); // velocidad de aparición
+                setTimeout(escribirNota, 40);
             }
         }
 
         window.onload = escribirNota;
+
+        // Control de música
+        const musica = document.getElementById('musica');
+        const botonMusica = document.getElementById('botonMusica');
+
+        function toggleMusica() {
+            if (musica.paused) {
+                musica.play();
+                botonMusica.innerText = '⏸️ Pausar música';
+            } else {
+                musica.pause();
+                botonMusica.innerText = '🎶 Reproducir música';
+            }
+        }
 
         // Corazones animados
         function crearCorazon() {
@@ -98,4 +146,5 @@
     </script>
 </body>
 </html>
+
 
