@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que siento por ti ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        .container {
+            margin: 20px auto;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+            display: inline-block;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #c084fc;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #e1e1e1;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .letters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .letter {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background-color: #7c3aed;
+            color: white;
+            border: 2px solid #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .letter:hover {
+            background-color: #9f67ff;
+        }
+
+        .dropzone {
+            display: flex;
+            justify-content: center;
+            border: 2px dashed #7c3aed;
+            min-height: 50px;
+            padding: 10px;
+            flex-wrap: wrap;
+            background: #262626;
+            border-radius: 10px;
+        }
+
+        .placed-letter {
+            margin: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #c084fc;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #c084fc;
+            color: #000;
+        }
+
+        p#result {
+            font-weight: bold;
+            color: #c084fc;
+        }
+
+        .final-message {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #e1e1e1;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff79c6;
+            text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6, 0 0 30px #ff79c6;
+            margin-top: 20px;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6, 0 0 30px #ff79c6; }
+            100% { text-shadow: 0 0 15px #ffb6c1, 0 0 25px #ffb6c1, 0 0 35px #ffb6c1; }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Lo que siento por ti ❤️</h1>
+    <h2 id="nivel-titulo">Nivel 1: Aprecio</h2>
+    <div class="container">
+        <div class="letters" id="letters"></div>
+        <div class="dropzone" id="dropzone"></div>
+        <button onclick="checkWord()">Verificar</button>
+        <button onclick="restartGame()">Reiniciar Nivel</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="final-message" id="final-message" style="display: none;">
+        <p>Cariño, aprecio y amor son apenas una cantidad mínima de todo lo que siento por ti, <b>Ivelka</b>.</p>
+        <p class="highlight">Te amo 3 millones en todos los universos. ❤️</p>
+    </div>
+
+    <script>
+        const palabras = ["aprecio", "cariño", "amor"];
+        let nivelActual = 0;
+        let placedLetters = [];
+
+        function setupGame() {
+            const palabra = palabras[nivelActual];
+            document.getElementById('nivel-titulo').textContent = `Nivel ${nivelActual + 1}: ${palabra.charAt(0).toUpperCase() + palabra.slice(1)}`;
+
+            const shuffled = palabra.split('').sort(() => Math.random() - 0.5);
+            const lettersContainer = document.getElementById("letters");
+            const dropzone = document.getElementById("dropzone");
+            const finalMessage = document.getElementById("final-message");
+
+            lettersContainer.innerHTML = '';
+            dropzone.innerHTML = '';
+            placedLetters = [];
+            finalMessage.style.display = 'none';
+
+            shuffled.forEach((letter, index) => {
+                const div = document.createElement("div");
+                div.textContent = letter;
+                div.classList.add("letter");
+                div.onclick = () => placeLetter(letter, index, div);
+                lettersContainer.appendChild(div);
+            });
+
+            document.getElementById("result").textContent = '';
+        }
+
+        function placeLetter(letter, index, element) {
+            if (placedLetters.length < palabras[nivelActual].length) {
+                const span = document.createElement("span");
+                span.textContent = letter;
+                span.classList.add("placed-letter");
+                span.onclick = () => removeLetter(span, element);
+                document.getElementById("dropzone").appendChild(span);
+                placedLetters.push({ letter, element });
+                element.style.visibility = 'hidden';
+            }
+        }
+
+        function removeLetter(span, element) {
+            document.getElementById("dropzone").removeChild(span);
+            element.style.visibility = 'visible';
+            placedLetters = placedLetters.filter(l => l.element !== element);
+        }
+
+        function checkWord() {
+            const formedWord = placedLetters.map(l => l.letter).join('');
+            const palabraCorrecta = palabras[nivelActual];
+            const result = document.getElementById("result");
+
+            if (formedWord === palabraCorrecta) {
+                result.textContent = "¡Correcto! ❤️";
+                setTimeout(() => {
+                    nivelActual++;
+                    if (nivelActual < palabras.length) {
+                        setupGame();
+                    } else {
+                        showFinalMessage();
+                    }
+                }, 1500);
+            } else {
+                result.textContent = "Ups, aún no es correcto.";
+            }
+        }
+
+        function showFinalMessage() {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('nivel-titulo').style.display = 'none';
+            document.getElementById('main-title').style.display = 'none';  // Oculta el título principal
+            document.getElementById('final-message').style.display = 'block';
+        }
+
+        function restartGame() {
+            nivelActual = 0;
+            document.querySelector('.container').style.display = 'inline-block';
+            document.getElementById('nivel-titulo').style.display = 'block';
+            document.getElementById('main-title').style.display = 'block';  // Vuelve a mostrar el título
+            setupGame();
+        }
+
+        setupGame();
+    </script>
+</body>
+</html>
