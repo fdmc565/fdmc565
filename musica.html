@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .player {
+            width: 320px;
+            background: #111;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .cover {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .song-title {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .artist {
+            font-size: 14px;
+            color: #bbb;
+        }
+        .description {
+            font-size: 14px;
+            color: #ff5e5e;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .long-description {
+            font-size: 12px;
+            color: #ddd;
+            margin-top: 10px;
+            text-align: justify;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            margin: 0 5px;
+        }
+        .btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player">
+        <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x424/public/field/image/article/canserbero_02.jpg?itok=2X525z7X" class="cover" alt="Cover">
+        <div class="song-title">Querer Querernos</div>
+        <div class="artist">Fritrs Rei</div>
+        <div class="description">Le dedico esta canción a Ivelka porque la amo ❤️</div>
+        <div class="long-description">"Querer Querernos" es una canción que habla sobre el amor sincero y el deseo de estar con alguien sin miedo. Sus letras reflejan la importancia de amarse mutuamente y de luchar por una relación verdadera, sin importar las dificultades. Es un tema que transmite sentimientos profundos y nos recuerda que el amor es una decisión que se toma cada día. ❤️</div>
+        <audio id="audio" src="Canserbero_-_Querer_Querernos_(VersiÃ³n_AcÃºstica)_[_YouConvert.net_].mp3"></audio>
+        <div class="controls">
+            <button class="btn" onclick="goToStart()">⏮</button>
+            <button class="btn" onclick="rewind10()">⏪</button>
+            <button class="btn" id="playPauseBtn" onclick="togglePlay()">▶️</button>
+            <button class="btn" onclick="forward10()">⏩</button>
+            <button class="btn" onclick="goToEnd()">⏭</button>
+        </div>
+    </div>
+
+    <script>
+        let audio = document.getElementById("audio");
+        let playPauseBtn = document.getElementById("playPauseBtn");
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = "▶️";
+            }
+        }
+
+        function goToStart() {
+            audio.currentTime = 0;
+        }
+
+        function rewind10() {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        }
+
+        function forward10() {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        }
+
+        function goToEnd() {
+            audio.currentTime = audio.duration;
+        }
+
+        // 🔄 Repetir automáticamente cuando termine
+        audio.addEventListener("ended", function() {
+            audio.currentTime = 0;
+            audio.play(); // Reproduce automáticamente
+        });
+    </script>
+
+</body>
+</html>
+
