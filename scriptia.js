@@ -773,10 +773,7 @@ if (input.includes("estoy triste")) return "Lamento escuchar eso. Estoy aquí pa
   } else if (input.includes("gestionar proyectos")) {
     return "Sé cómo gestionar proyectos con éxito. ¿Tienes algún proyecto en mente?";
 
-  }
-}
-function getBotResponse(input) {
-  if (input.includes("matemáticas")) {
+} else if (input.includes("matemáticas")) {
     return "¡Claro! Puedo ayudarte con todo tipo de problemas matemáticos, desde aritmética hasta álgebra y cálculo.";
   } else if (input.includes("suma")) {
     return "Puedo ayudarte a realizar sumas. ¿Qué números te gustaría sumar?";
@@ -869,10 +866,7 @@ function getBotResponse(input) {
   } else if (input.includes("método gráfico")) {
     return "El método gráfico es útil para resolver sistemas de ecuaciones visualmente. Puedo enseñarte cómo hacerlo.";
 
-  }
-}
-function getBotResponse(input) {
-  if (input.includes("ciencias naturales")) {
+} else if (input.includes("ciencias naturales")) {
     return "¡Claro! Puedo ayudarte con temas de biología, física, química y más.";
   } else if (input.includes("físico")) {
     return "Un físico estudia las propiedades y el comportamiento de la materia y la energía.";
@@ -985,10 +979,7 @@ function getBotResponse(input) {
   } else if (input.includes("biósfera")) {
     return "La biósfera es la capa de la Tierra donde existe vida, que incluye la tierra, los océanos y la atmósfera.";
 
-  }
-}
-function getBotResponse(input) {
-  if (input.includes("películas")) {
+} else if (input.includes("películas")) {
     return "¡Claro! Puedo recomendarte películas. ¿Qué tipo de películas te gustan?";
   } else if (input.includes("acción")) {
     return "Las películas de acción suelen ser emocionantes y llenas de escenas intensas. ¿Te gustan las de acción?";
@@ -1113,11 +1104,9 @@ function getBotResponse(input) {
   } else if (input.includes("G.I. Joe")) {
     return "G.I. Joe es una serie sobre un equipo de élite que lucha contra el mal. ¿Te gustan las series de acción?";
   } else {
-    return "Lo siento, no tengo información sobre ese tema. ¿Te gustaría preguntar sobre algo más relacionado con películas, series o dibujos animados?";
-  }
-}
-function getBotResponse(input) {
-  if (input.includes("recomiéndame una película")) {
+ 
+
+} if (input.includes("recomiéndame una película")) {
     return "Claro, ¿qué tipo de película te gustaría ver? ¿Acción, comedia, drama o algo diferente?";
   } else if (input.includes("algo para ver")) {
     return "¡Tengo algunas recomendaciones! ¿Prefieres una película o una serie?";
@@ -1137,6 +1126,100 @@ function getBotResponse(input) {
     return "Si te gustan los documentales, 'Cosmos' o 'Making a Murderer' son bastante interesantes.";
   } else if (input.includes("recomendación para ver en pareja")) {
     return "Si vas a ver algo en pareja, te sugiero películas románticas como 'The Notebook' o 'P.D. Te Amo'. Son perfectas para ese momento.";
+
+} else if (input.includes("relación de novios")) {
+    return "Las relaciones de novios requieren confianza, comunicación y respeto. ¿Cómo va tu relación?";
+  } else if (input.includes("relación de amistad")) {
+    return "La amistad se basa en la confianza y el apoyo mutuo. ¿Tienes algún amigo cercano con quien compartir todo?";
+  } else if (input.includes("mi novia")) {
+    return "¡Qué bonito! ¿Cómo van las cosas con tu novia? ¿Hay algo que te gustaría compartir o preguntar sobre relaciones?";
+  } else if (input.includes("novio")) {
+    return "¿Tu novio te trata bien? Las relaciones deben ser de apoyo y respeto mutuo.";
+  } else if (input.includes("cómo mejorar mi relación")) {
+    return "Para mejorar tu relación, es clave comunicarte sinceramente, pasar tiempo juntos y resolver cualquier malentendido.";
+  } else if (input.includes("comunicación en la relación")) {
+    return "La comunicación es fundamental en cualquier relación. Es importante hablar sobre lo que piensas y cómo te sientes.";
+  } else if (input.includes("confianza en la relación")) {
+    return "La confianza es la base de cualquier relación sólida. ¿Confías plenamente en tu pareja?";
+  } else if (input.includes("ser amigo de mi pareja")) {
+    return "Ser amigo de tu pareja es muy importante. La amistad fortalece la relación romántica.";
+  } else if (input.includes("mi amistad con alguien")) {
+    return "Las amistades son una de las relaciones más importantes en la vida. ¿Tienes una amistad que te gustaría fortalecer?";
+  } else if (input.includes("relación saludable")) {
+    return "Una relación saludable es aquella donde ambos se apoyan, se respetan y se comunican de manera abierta.";
+  } else if (input.includes("relación a distancia")) {
+    return "Las relaciones a distancia requieren confianza y esfuerzo. Es importante mantener la comunicación constante.";
+  } else if (input.includes("mi pareja y yo tenemos problemas")) {
+    return "Si tu pareja y tú están teniendo problemas, lo mejor es hablar con sinceridad y buscar soluciones juntos.";
+  } else if (input.includes("sentirse celoso en una relación")) {
+    return "El celosismo puede ser un desafío en una relación. Es importante hablar de estos sentimientos con tu pareja para evitar malentendidos.";
+  } else if (input.includes("cómo confiar más en mi pareja")) {
+    return "La confianza se construye con el tiempo y la sinceridad. ¿Qué cosas te hacen sentir inseguro en la relación?";
+  } else if (input.includes("problemas con un amigo")) {
+    return "Los problemas entre amigos son comunes. Lo más importante es la honestidad y tratar de entender el punto de vista del otro.";
+  } else if (input.includes("terminar con mi novio")) {
+    return "Terminar una relación nunca es fácil. Es importante ser honesto y respetuoso con los sentimientos de ambos.";
+  } else if (input.includes("sentimientos de amistad")) {
+    return "Las amistades son relaciones muy especiales. ¿Te gustaría saber cómo fortalecer tu amistad con alguien?";
+  } else if (input.includes("cómo llevar una buena relación")) {
+    return "Para llevar una buena relación, es necesario tener confianza, ser honesto y compartir momentos juntos.";
+  } else if (input.includes("relaciones tóxicas")) {
+    return "Las relaciones tóxicas pueden ser muy dañinas. Es importante reconocer los signos y salir de ellas para tu bienestar.";
+  } else if (input.includes("mi amiga me traicionó")) {
+    return "Es doloroso cuando un amigo te traiciona. Hablar con ella sobre lo que sucedió podría ayudar a sanar la situación.";
+  } else if (input.includes("conflictos en pareja")) {
+    return "Los conflictos son normales, pero lo más importante es cómo los resuelves. ¿Ya intentaste hablar con tu pareja sobre esto?";
+  } else if (input.includes("gestos románticos")) {
+    return "Los gestos románticos, como una carta o una sorpresa, pueden hacer que la relación sea más especial. ¿Has hecho algo romántico por tu pareja?";
+  } else if (input.includes("reconciliación después de una pelea")) {
+    return "La reconciliación requiere humildad y honestidad. ¿Te gustaría saber cómo hacerlo después de una pelea con tu pareja?";
+  } else if (input.includes("me siento solo en mi relación")) {
+    return "Es normal sentirse solo a veces. Hablar con tu pareja sobre cómo te sientes puede ayudar a mejorar la conexión.";
+  } else if (input.includes("amistad verdadera")) {
+    return "Una verdadera amistad es aquella en la que ambos se apoyan y son sinceros. ¿Tienes un amigo verdadero en quien confíes?";
+  } else if (input.includes("reconciliarme con mi amiga")) {
+    return "Para reconciliarte con una amiga, es importante ser honesto, pedir disculpas si es necesario y trabajar en el entendimiento mutuo.";
+  } else if (input.includes("hacer feliz a mi novia")) {
+    return "Hacer feliz a tu novia puede ser tan simple como escucharla, pasar tiempo con ella y sorprenderla con pequeños detalles.";
+  } else if (input.includes("mi amiga está distante")) {
+    return "Si tu amiga está distante, podría ser útil hablar con ella y preguntarle cómo está. A veces, las personas pasan por momentos difíciles.";
+  } else if (input.includes("qué hacer cuando me siento celoso")) {
+    return "El celosismo puede ser una emoción difícil de manejar. Lo importante es hablar de lo que sientes con tu pareja para aclarar cualquier malentendido.";
+  } else if (input.includes("cómo saber si es la persona correcta")) {
+    return "La persona correcta en una relación te hace sentir amado, respetado y apoyado. ¿Cómo te sientes en tu relación?";
+  } else if (input.includes("enfrentar problemas con mi novio")) {
+    return "Es importante enfrentar los problemas en pareja con respeto y sinceridad. ¿Has hablado con él sobre lo que te preocupa?";
+  } else if (input.includes("amistad y amor")) {
+    return "El amor y la amistad pueden ir de la mano. Si tienes una relación con tu mejor amigo o amiga, ¡es algo muy especial!";
+  } else if (input.includes("mi amiga está celosa")) {
+    return "Si tu amiga está celosa, tal vez es una buena idea hablar con ella y comprender sus sentimientos para resolver la situación.";
+  } else if (input.includes("me siento incomprendido por mi pareja")) {
+    return "Es difícil cuando te sientes incomprendido. Hablar de tus emociones con tu pareja puede ayudar a mejorar la situación.";
+  } else if (input.includes("cómo fortalecer la relación de pareja")) {
+    return "Para fortalecer una relación, es clave pasar tiempo de calidad juntos, comunicarte abiertamente y cuidar el respeto mutuo.";
+  } else if (input.includes("perdí la confianza en mi amiga")) {
+    return "Si has perdido la confianza en tu amiga, podría ser útil hablar sobre lo que sucedió y tratar de encontrar una solución.";
+  } else if (input.includes("decirle a mi amiga lo que siento")) {
+    return "Decirle a tu amiga lo que sientes es importante para mantener la relación sincera. ¿Te gustaría recibir algún consejo sobre cómo hacerlo?";
+  } else if (input.includes("tengo miedo de perder a mi novia")) {
+    return "Es natural tener miedo a perder a alguien a quien amas. Lo importante es trabajar en la relación y comunicarte con ella para asegurarte de que ambos estén felices.";
+  } else if (input.includes("relación sana")) {
+    return "Una relación sana se basa en el respeto mutuo, la confianza, y el apoyo. ¿Te gustaría saber más sobre cómo mantener una relación sana?";
+  } else if (input.includes("cómo ser un buen amigo")) {
+    return "Ser un buen amigo implica ser confiable, escuchar y estar allí para la otra persona en los momentos buenos y malos.";
+  } else if (input.includes("mi amiga está pasando por un mal momento")) {
+    return "Si tu amiga está pasando por un mal momento, lo mejor es brindarle tu apoyo y escucharla. A veces solo necesitamos a alguien que nos escuche.";
+  } else if (input.includes("pareja y amigos a la vez")) {
+    return "Es posible ser pareja y amigos al mismo tiempo, ya que una buena amistad puede fortalecer la relación romántica.";
+  } else if (input.includes("cómo dar espacio en una relación")) {
+    return "Dar espacio en una relación es importante para que ambos puedan mantener su individualidad y bienestar. Hablar de las necesidades de espacio puede ser útil.";
+  } else if (input.includes("cómo hacer feliz a un amigo")) {
+    return "Hacer feliz a un amigo puede ser tan simple como pasar tiempo juntos, escuchar sus preocupaciones y estar allí cuando te necesite.";
+  } else if (input.includes("me siento atrapado en la relación")) {
+    return "Es importante que te sientas libre y feliz en tu relación. Si te sientes atrapado, es importante hablar de tus sentimientos con tu pareja.";
+  } else if (input.includes("mi pareja no me comprende")) {
+    return "Si sientes que tu pareja no te comprende, la comunicación abierta puede ayudar a resolver el malentendido y acercarse más.";
+
   }
 }
 function getBotResponse(input) {
@@ -1232,105 +1315,6 @@ function getBotResponse(input) {
     return "Es importante que te sientas libre y feliz en tu relación. Si te sientes atrapado, es importante hablar de tus sentimientos con tu pareja.";
   } else if (input.includes("mi pareja no me comprende")) {
     return "Si sientes que tu pareja no te comprende, la comunicación abierta puede ayudar a resolver el malentendido y acercarse más.";
-  } else {
-    return "Lo siento, no tengo una respuesta para eso. ¿Te gustaría preguntar sobre algo más relacionado con relaciones o amistades?";
-  }
-}
-function getBotResponse(input) {
-  if (input.includes("relación de novios")) {
-    return "Las relaciones de novios requieren confianza, comunicación y respeto. ¿Cómo va tu relación?";
-  } else if (input.includes("relación de amistad")) {
-    return "La amistad se basa en la confianza y el apoyo mutuo. ¿Tienes algún amigo cercano con quien compartir todo?";
-  } else if (input.includes("mi novia")) {
-    return "¡Qué bonito! ¿Cómo van las cosas con tu novia? ¿Hay algo que te gustaría compartir o preguntar sobre relaciones?";
-  } else if (input.includes("novio")) {
-    return "¿Tu novio te trata bien? Las relaciones deben ser de apoyo y respeto mutuo.";
-  } else if (input.includes("cómo mejorar mi relación")) {
-    return "Para mejorar tu relación, es clave comunicarte sinceramente, pasar tiempo juntos y resolver cualquier malentendido.";
-  } else if (input.includes("comunicación en la relación")) {
-    return "La comunicación es fundamental en cualquier relación. Es importante hablar sobre lo que piensas y cómo te sientes.";
-  } else if (input.includes("confianza en la relación")) {
-    return "La confianza es la base de cualquier relación sólida. ¿Confías plenamente en tu pareja?";
-  } else if (input.includes("ser amigo de mi pareja")) {
-    return "Ser amigo de tu pareja es muy importante. La amistad fortalece la relación romántica.";
-  } else if (input.includes("mi amistad con alguien")) {
-    return "Las amistades son una de las relaciones más importantes en la vida. ¿Tienes una amistad que te gustaría fortalecer?";
-  } else if (input.includes("relación saludable")) {
-    return "Una relación saludable es aquella donde ambos se apoyan, se respetan y se comunican de manera abierta.";
-  } else if (input.includes("relación a distancia")) {
-    return "Las relaciones a distancia requieren confianza y esfuerzo. Es importante mantener la comunicación constante.";
-  } else if (input.includes("mi pareja y yo tenemos problemas")) {
-    return "Si tu pareja y tú están teniendo problemas, lo mejor es hablar con sinceridad y buscar soluciones juntos.";
-  } else if (input.includes("sentirse celoso en una relación")) {
-    return "El celosismo puede ser un desafío en una relación. Es importante hablar de estos sentimientos con tu pareja para evitar malentendidos.";
-  } else if (input.includes("cómo confiar más en mi pareja")) {
-    return "La confianza se construye con el tiempo y la sinceridad. ¿Qué cosas te hacen sentir inseguro en la relación?";
-  } else if (input.includes("problemas con un amigo")) {
-    return "Los problemas entre amigos son comunes. Lo más importante es la honestidad y tratar de entender el punto de vista del otro.";
-  } else if (input.includes("terminar con mi novio")) {
-    return "Terminar una relación nunca es fácil. Es importante ser honesto y respetuoso con los sentimientos de ambos.";
-  } else if (input.includes("sentimientos de amistad")) {
-    return "Las amistades son relaciones muy especiales. ¿Te gustaría saber cómo fortalecer tu amistad con alguien?";
-  } else if (input.includes("cómo llevar una buena relación")) {
-    return "Para llevar una buena relación, es necesario tener confianza, ser honesto y compartir momentos juntos.";
-  } else if (input.includes("relaciones tóxicas")) {
-    return "Las relaciones tóxicas pueden ser muy dañinas. Es importante reconocer los signos y salir de ellas para tu bienestar.";
-  } else if (input.includes("mi amiga me traicionó")) {
-    return "Es doloroso cuando un amigo te traiciona. Hablar con ella sobre lo que sucedió podría ayudar a sanar la situación.";
-  } else if (input.includes("conflictos en pareja")) {
-    return "Los conflictos son normales, pero lo más importante es cómo los resuelves. ¿Ya intentaste hablar con tu pareja sobre esto?";
-  } else if (input.includes("gestos románticos")) {
-    return "Los gestos románticos, como una carta o una sorpresa, pueden hacer que la relación sea más especial. ¿Has hecho algo romántico por tu pareja?";
-  } else if (input.includes("reconciliación después de una pelea")) {
-    return "La reconciliación requiere humildad y honestidad. ¿Te gustaría saber cómo hacerlo después de una pelea con tu pareja?";
-  } else if (input.includes("me siento solo en mi relación")) {
-    return "Es normal sentirse solo a veces. Hablar con tu pareja sobre cómo te sientes puede ayudar a mejorar la conexión.";
-  } else if (input.includes("amistad verdadera")) {
-    return "Una verdadera amistad es aquella en la que ambos se apoyan y son sinceros. ¿Tienes un amigo verdadero en quien confíes?";
-  } else if (input.includes("reconciliarme con mi amiga")) {
-    return "Para reconciliarte con una amiga, es importante ser honesto, pedir disculpas si es necesario y trabajar en el entendimiento mutuo.";
-  } else if (input.includes("hacer feliz a mi novia")) {
-    return "Hacer feliz a tu novia puede ser tan simple como escucharla, pasar tiempo con ella y sorprenderla con pequeños detalles.";
-  } else if (input.includes("mi amiga está distante")) {
-    return "Si tu amiga está distante, podría ser útil hablar con ella y preguntarle cómo está. A veces, las personas pasan por momentos difíciles.";
-  } else if (input.includes("qué hacer cuando me siento celoso")) {
-    return "El celosismo puede ser una emoción difícil de manejar. Lo importante es hablar de lo que sientes con tu pareja para aclarar cualquier malentendido.";
-  } else if (input.includes("cómo saber si es la persona correcta")) {
-    return "La persona correcta en una relación te hace sentir amado, respetado y apoyado. ¿Cómo te sientes en tu relación?";
-  } else if (input.includes("enfrentar problemas con mi novio")) {
-    return "Es importante enfrentar los problemas en pareja con respeto y sinceridad. ¿Has hablado con él sobre lo que te preocupa?";
-  } else if (input.includes("amistad y amor")) {
-    return "El amor y la amistad pueden ir de la mano. Si tienes una relación con tu mejor amigo o amiga, ¡es algo muy especial!";
-  } else if (input.includes("mi amiga está celosa")) {
-    return "Si tu amiga está celosa, tal vez es una buena idea hablar con ella y comprender sus sentimientos para resolver la situación.";
-  } else if (input.includes("me siento incomprendido por mi pareja")) {
-    return "Es difícil cuando te sientes incomprendido. Hablar de tus emociones con tu pareja puede ayudar a mejorar la situación.";
-  } else if (input.includes("cómo fortalecer la relación de pareja")) {
-    return "Para fortalecer una relación, es clave pasar tiempo de calidad juntos, comunicarte abiertamente y cuidar el respeto mutuo.";
-  } else if (input.includes("perdí la confianza en mi amiga")) {
-    return "Si has perdido la confianza en tu amiga, podría ser útil hablar sobre lo que sucedió y tratar de encontrar una solución.";
-  } else if (input.includes("decirle a mi amiga lo que siento")) {
-    return "Decirle a tu amiga lo que sientes es importante para mantener la relación sincera. ¿Te gustaría recibir algún consejo sobre cómo hacerlo?";
-  } else if (input.includes("tengo miedo de perder a mi novia")) {
-    return "Es natural tener miedo a perder a alguien a quien amas. Lo importante es trabajar en la relación y comunicarte con ella para asegurarte de que ambos estén felices.";
-  } else if (input.includes("relación sana")) {
-    return "Una relación sana se basa en el respeto mutuo, la confianza, y el apoyo. ¿Te gustaría saber más sobre cómo mantener una relación sana?";
-  } else if (input.includes("cómo ser un buen amigo")) {
-    return "Ser un buen amigo implica ser confiable, escuchar y estar allí para la otra persona en los momentos buenos y malos.";
-  } else if (input.includes("mi amiga está pasando por un mal momento")) {
-    return "Si tu amiga está pasando por un mal momento, lo mejor es brindarle tu apoyo y escucharla. A veces solo necesitamos a alguien que nos escuche.";
-  } else if (input.includes("pareja y amigos a la vez")) {
-    return "Es posible ser pareja y amigos al mismo tiempo, ya que una buena amistad puede fortalecer la relación romántica.";
-  } else if (input.includes("cómo dar espacio en una relación")) {
-    return "Dar espacio en una relación es importante para que ambos puedan mantener su individualidad y bienestar. Hablar de las necesidades de espacio puede ser útil.";
-  } else if (input.includes("cómo hacer feliz a un amigo")) {
-    return "Hacer feliz a un amigo puede ser tan simple como pasar tiempo juntos, escuchar sus preocupaciones y estar allí cuando te necesite.";
-  } else if (input.includes("me siento atrapado en la relación")) {
-    return "Es importante que te sientas libre y feliz en tu relación. Si te sientes atrapado, es importante hablar de tus sentimientos con tu pareja.";
-  } else if (input.includes("mi pareja no me comprende")) {
-    return "Si sientes que tu pareja no te comprende, la comunicación abierta puede ayudar a resolver el malentendido y acercarse más.";
-  } else {
-    return "Lo siento, no tengo una respuesta para eso. ¿Te gustaría preguntar sobre algo más relacionado con relaciones o amistades?";
   }
 }
 function getBotResponse(input) {
@@ -1596,6 +1580,9 @@ function getBotResponse(input) {
 
 return "...";
 
+
+
+return "Interesante... ¿Quieres contarme más sobre eso?";
 
     
 }
