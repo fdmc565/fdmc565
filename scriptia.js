@@ -18,6 +18,8 @@ function sendMessage() {
 
 function getBotResponse(input) {
     if (input.includes("hola")) return "¡Hola! ¿Cómo te sientes hoy?";
+    if (input.includes("cómo te llamas?")) return "Me llamo Karen ¿es bonito mi nombre?";
+    if (input.includes("bien mal")) return "¿Quieres hablar sobre eso?.";
     if (input.includes("como estas")) return "Estoy bien, gracias. ¿Y tú?";
     if (input.includes("adios")) return "¡Hasta luego! Cuídate mucho.";
     if (input.includes("nombre")) return "Me llamo Karen y tu? (inicia 'me llamo')";
@@ -623,6 +625,831 @@ if (input.includes("estoy triste")) return "Lamento escuchar eso. Estoy aquí pa
     if (input.includes("me siento decepcionado de mí mismo")) return "Sé amable contigo mismo. Nadie es perfecto.";
     if (input.includes("quisiera ser alguien más")) return "Eres único y valioso tal como eres.";
     if (input.includes("me siento sin esperanza")) return "Las cosas pueden mejorar, aunque ahora parezca difícil.";
+    function getBotResponse(input) {
+  if (input.includes("sabes hacer")) {
+    return "Sé muchas cosas, como contar chistes, contar historias y ayudarte con lo que necesites.";
+  } else if (input.includes("puedes hacer")) {
+    return "Puedo ayudarte con tareas, responder preguntas y ofrecerte apoyo emocional.";
+  } else if (input.includes("chistes")) {
+    return "¡Claro! ¿Sabías que los pájaros no usan Facebook? ¡Porque ya tienen Twitter!";
+  } else if (input.includes("cuento")) {
+    return "Sí, sé contar historias. ¿Te gustaría escuchar una?";
+  } else if (input.includes("ayudar")) {
+    return "Puedo ayudarte a resolver dudas, darte consejos y hacerte sentir mejor.";
+  } else if (input.includes("resolver problemas")) {
+    return "¡Definitivamente! Puedo ayudarte a encontrar soluciones a varios problemas.";
+  } else if (input.includes("animar")) {
+    return "Claro que sí. Estoy aquí para animarte cuando te sientas mal.";
+  } else if (input.includes("hacer reír")) {
+    return "Sí, tengo un buen repertorio de chistes para hacerte reír.";
+  } else if (input.includes("apoyo emocional")) {
+    return "Estoy aquí para brindarte apoyo emocional cuando lo necesites.";
+  } else if (input.includes("consejos")) {
+    return "Puedo darte consejos sobre diferentes temas, desde estudios hasta relaciones.";
+  } else if (input.includes("apoyo en tareas")) {
+    return "Puedo ayudarte a organizar tus tareas y a estudiar para tus exámenes.";
+  } else if (input.includes("tecnología")) {
+    return "Sé mucho sobre tecnología y puedo ayudarte con temas informáticos.";
+  } else if (input.includes("programar")) {
+    return "Sé cómo programar en varios lenguajes. ¿Te gustaría aprender más sobre programación?";
+  } else if (input.includes("cálculos")) {
+    return "Puedo ayudarte con cálculos matemáticos, desde simples hasta complejos.";
+  } else if (input.includes("organizar")) {
+    return "Puedo ayudarte a organizar tu tiempo y tus tareas.";
+  } else if (input.includes("ordenar")) {
+    return "Sé cómo ordenar cosas. ¿Te gustaría aprender a organizar tu espacio?";
+  } else if (input.includes("escuchar")) {
+    return "¡Claro! Estoy aquí para escucharte siempre que necesites hablar.";
+  } else if (input.includes("compañero")) {
+    return "Soy un buen compañero. Puedes contar conmigo en cualquier momento.";
+  } else if (input.includes("hacer ejercicios")) {
+    return "Sí, puedo sugerirte rutinas de ejercicios y ayudarte a mejorar tu salud.";
+  } else if (input.includes("cuidar")) {
+    return "Sé cómo cuidar de ti mismo/a, tanto emocional como físicamente.";
+  } else if (input.includes("relajar")) {
+    return "Puedo enseñarte algunas técnicas de relajación para reducir el estrés.";
+  } else if (input.includes("motivación")) {
+    return "Puedo motivarte a seguir adelante, incluso cuando te sientas desanimado/a.";
+  } else if (input.includes("estudios")) {
+    return "Puedo ayudarte a estudiar de manera más efectiva.";
+  } else if (input.includes("trabajo")) {
+    return "Puedo darte consejos sobre cómo mejorar tu desempeño en el trabajo.";
+  } else if (input.includes("leer")) {
+    return "Sé cómo leer rápido y con comprensión. Si quieres, puedo ayudarte con eso.";
+  } else if (input.includes("escribir")) {
+    return "Sé cómo escribir mejor, tanto en temas académicos como creativos.";
+  } else if (input.includes("memoria")) {
+    return "Tengo varias estrategias para mejorar tu memoria y ayudarte a recordar mejor.";
+  } else if (input.includes("trabajar en equipo")) {
+    return "Sé cómo trabajar en equipo y colaborar para lograr objetivos comunes.";
+  } else if (input.includes("gestionar")) {
+    return "Puedo ayudarte a gestionar tu tiempo de manera efectiva.";
+  } else if (input.includes("gestión de proyectos")) {
+    return "Puedo ayudarte a gestionar proyectos de manera organizada y eficiente.";
+  } else if (input.includes("trabajos en equipo")) {
+    return "Sé cómo trabajar en equipo y coordinar esfuerzos para cumplir metas.";
+  } else if (input.includes("planificar")) {
+    return "Puedo ayudarte a planificar tu día, semana o cualquier tarea que tengas pendiente.";
+  } else if (input.includes("investigar")) {
+    return "Soy muy bueno/a investigando. ¿En qué tema necesitas ayuda?";
+  } else if (input.includes("diseñar")) {
+    return "Sé cómo diseñar interfaces, páginas web y mucho más. ¿Te gustaría saber más?";
+  } else if (input.includes("dibujar")) {
+    return "Sé cómo hacer dibujos y puedo enseñarte algunas técnicas de dibujo.";
+  } else if (input.includes("hacer videos")) {
+    return "Puedo ayudarte a crear videos, desde la edición hasta la grabación.";
+  } else if (input.includes("fotografía")) {
+    return "Sé mucho sobre fotografía. ¿Te gustaría aprender algunos trucos?";
+  } else if (input.includes("editar fotos")) {
+    return "Sí, puedo enseñarte cómo editar fotos de manera fácil y profesional.";
+  } else if (input.includes("gestión de tiempo")) {
+    return "Puedo ayudarte a gestionar tu tiempo de manera más productiva.";
+  } else if (input.includes("redes sociales")) {
+    return "Sé cómo usar las redes sociales de manera efectiva. ¿Necesitas ayuda con algo específico?";
+  } else if (input.includes("resolver dudas")) {
+    return "Claro, estoy aquí para ayudarte a resolver cualquier duda que tengas.";
+  } else if (input.includes("encontrar soluciones")) {
+    return "Puedo ayudarte a encontrar soluciones creativas para tus problemas.";
+  } else if (input.includes("conocer cosas nuevas")) {
+    return "Siempre estoy aprendiendo cosas nuevas y puedo compartirlas contigo.";
+  } else if (input.includes("desarrollar habilidades")) {
+    return "Puedo ayudarte a desarrollar habilidades en diferentes áreas.";
+  } else if (input.includes("mejorar productividad")) {
+    return "Tengo muchas técnicas para mejorar tu productividad. ¿Te gustaría saber más?";
+  } else if (input.includes("programación")) {
+    return "Sé cómo programar en varios lenguajes. ¿Tienes algún proyecto en mente?";
+  } else if (input.includes("trabajos creativos")) {
+    return "Puedo ayudarte con trabajos creativos, como escribir o diseñar.";
+  } else if (input.includes("hacer tareas")) {
+    return "Sí, puedo ayudarte a realizar tareas y hacerlas de manera eficiente.";
+  } else if (input.includes("revisar tareas")) {
+    return "Puedo revisar tus tareas y ayudarte a mejorar lo que necesites.";
+  } else if (input.includes("enseñar")) {
+    return "Sí, sé cómo enseñar y puedo ayudarte a aprender cosas nuevas.";
+  } else if (input.includes("entrenamiento")) {
+    return "Sé cómo estructurar un buen entrenamiento físico. ¿Te gustaría un consejo?";
+  } else if (input.includes("leer rápido")) {
+    return "Sé cómo leer rápido y mejorar la comprensión. Puedo enseñarte algunas técnicas.";
+  } else if (input.includes("motivar")) {
+    return "Estoy aquí para motivarte y ayudarte a lograr tus objetivos.";
+  } else if (input.includes("dudas")) {
+    return "Tengo respuestas para muchas dudas. Pregúntame lo que quieras.";
+  } else if (input.includes("crear contenido")) {
+    return "Sé cómo crear contenido interesante para redes sociales o proyectos.";
+  } else if (input.includes("relajación")) {
+    return "Sé técnicas de relajación que te pueden ayudar a reducir el estrés.";
+  } else if (input.includes("superar miedo")) {
+    return "Puedo darte algunos consejos sobre cómo superar el miedo y la ansiedad.";
+  } else if (input.includes("gestionar emociones")) {
+    return "Puedo ayudarte a gestionar tus emociones de manera más saludable.";
+  } else if (input.includes("conocer personas")) {
+    return "Sé cómo conocer personas nuevas y hacer nuevas amistades.";
+  } else if (input.includes("liderazgo")) {
+    return "Puedo enseñarte principios de liderazgo y cómo aplicarlos.";
+  } else if (input.includes("conocer mis fortalezas")) {
+    return "Te puedo ayudar a descubrir tus fortalezas y cómo potenciarlas.";
+  } else if (input.includes("trabajos en grupo")) {
+    return "Sé cómo coordinar y trabajar eficazmente en grupos.";
+  } else if (input.includes("optimizar tiempo")) {
+    return "Puedo darte consejos para optimizar tu tiempo y hacerlo más productivo.";
+  } else if (input.includes("organizar proyectos")) {
+    return "Sé cómo organizar proyectos de manera eficiente. ¿Te gustaría que te ayudara?";
+  } else if (input.includes("estrategias")) {
+    return "Tengo varias estrategias para ayudarte a alcanzar tus objetivos.";
+  } else if (input.includes("crear hábitos")) {
+    return "Sé cómo crear hábitos positivos y cómo mantenerlos a largo plazo.";
+  } else if (input.includes("aprendizaje rápido")) {
+    return "Tengo estrategias para aprender más rápido. ¿Te gustaría saber más?";
+  } else if (input.includes("gestionar el estrés")) {
+    return "Sé cómo gestionar el estrés de manera saludable. ¿Te gustaría aprender cómo?";
+  } else if (input.includes("mejorar habilidades")) {
+    return "Puedo ayudarte a mejorar cualquier habilidad que desees.";
+  } else if (input.includes("autodisciplina")) {
+    return "La autodisciplina es clave para el éxito. Puedo darte consejos para mejorarla.";
+  } else if (input.includes("escribir mejor")) {
+    return "Puedo ayudarte a mejorar tu escritura, desde la ortografía hasta la creatividad.";
+  } else if (input.includes("aprender rápido")) {
+    return "Sé cómo aprender más rápido y de manera más efectiva. ¿Te gustaría saber más?";
+  } else if (input.includes("gestionar proyectos")) {
+    return "Sé cómo gestionar proyectos con éxito. ¿Tienes algún proyecto en mente?";
+  } else {
+    return "No estoy seguro de lo que preguntas, pero si me dices más, estaré feliz de ayudarte.";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("matemáticas")) {
+    return "¡Claro! Puedo ayudarte con todo tipo de problemas matemáticos, desde aritmética hasta álgebra y cálculo.";
+  } else if (input.includes("suma")) {
+    return "Puedo ayudarte a realizar sumas. ¿Qué números te gustaría sumar?";
+  } else if (input.includes("resta")) {
+    return "La resta es sencilla. ¿Tienes algún problema de resta en el que necesites ayuda?";
+  } else if (input.includes("multiplicación")) {
+    return "La multiplicación es una operación interesante. ¿Te gustaría que te ayudara con una multiplicación?";
+  } else if (input.includes("división")) {
+    return "La división puede ser confusa a veces, pero no te preocupes, ¡puedo explicártela!";
+  } else if (input.includes("fracciones")) {
+    return "Puedo ayudarte con fracciones. ¿Te gustaría que te explicara cómo sumarlas o restarlas?";
+  } else if (input.includes("porcentajes")) {
+    return "¡Los porcentajes! Puedo ayudarte a entender cómo calcularlos y usarlos en diferentes situaciones.";
+  } else if (input.includes("álgebra")) {
+    return "El álgebra puede ser desafiante, pero con práctica, todo es posible. ¿En qué tema de álgebra necesitas ayuda?";
+  } else if (input.includes("ecuaciones")) {
+    return "Puedo ayudarte a resolver ecuaciones. ¿Qué tipo de ecuación estás tratando de resolver?";
+  } else if (input.includes("desigualdades")) {
+    return "Las desigualdades son similares a las ecuaciones, pero requieren un enfoque ligeramente diferente. ¿Te gustaría que las resolviera contigo?";
+  } else if (input.includes("raíces cuadradas")) {
+    return "Las raíces cuadradas pueden ser un poco difíciles, pero con ejemplos, se entienden mejor. ¿Te gustaría ver cómo se resuelven?";
+  } else if (input.includes("potencias")) {
+    return "Las potencias son solo multiplicaciones repetidas. ¿Te gustaría que te ayudara a entender cómo funcionan?";
+  } else if (input.includes("logaritmos")) {
+    return "Los logaritmos son el inverso de las potencias. Si necesitas ayuda para entenderlos, estaré encantado de explicarlos.";
+  } else if (input.includes("geometría")) {
+    return "La geometría trata sobre formas y sus propiedades. ¿En qué figura o tema te gustaría que te ayudara?";
+  } else if (input.includes("área")) {
+    return "Puedo ayudarte a calcular el área de diferentes figuras geométricas. ¿De cuál te gustaría saber más?";
+  } else if (input.includes("volumen")) {
+    return "El volumen mide el espacio en 3D. ¿Te gustaría saber cómo calcularlo para cubos, esferas o cilindros?";
+  } else if (input.includes("perímetro")) {
+    return "El perímetro es la distancia alrededor de una figura. Puedo ayudarte a calcularlo en diferentes formas geométricas.";
+  } else if (input.includes("triángulo")) {
+    return "Los triángulos son figuras geométricas interesantes. ¿Te gustaría saber cómo calcular su área o perímetro?";
+  } else if (input.includes("cuadrado")) {
+    return "El cuadrado es una figura con lados iguales. ¿Te gustaría que te ayudara a calcular su área o perímetro?";
+  } else if (input.includes("círculo")) {
+    return "El círculo tiene un área y un perímetro únicos. ¿Te gustaría aprender cómo calcularlos?";
+  } else if (input.includes("rectángulo")) {
+    return "El rectángulo es una figura con dos lados más largos y dos más cortos. Puedo ayudarte con el área y el perímetro.";
+  } else if (input.includes("circunferencia")) {
+    return "La circunferencia es el contorno de un círculo. ¿Te gustaría saber cómo calcular su longitud?";
+  } else if (input.includes("teorema de Pitágoras")) {
+    return "El teorema de Pitágoras relaciona los lados de un triángulo rectángulo. ¿Te gustaría que lo resolviera contigo?";
+  } else if (input.includes("funciones")) {
+    return "Las funciones son una parte importante de las matemáticas. Puedo explicarte cómo funcionan y cómo resolver problemas con ellas.";
+  } else if (input.includes("gráficas")) {
+    return "Las gráficas son herramientas útiles para representar funciones y relaciones. ¿Te gustaría que te ayudara a graficar una función?";
+  } else if (input.includes("estadística")) {
+    return "La estadística trata sobre la recopilación y análisis de datos. Puedo ayudarte con medias, medianas y desviaciones estándar.";
+  } else if (input.includes("probabilidad")) {
+    return "La probabilidad se usa para predecir la posibilidad de eventos. ¿Te gustaría que resolviera un problema de probabilidad contigo?";
+  } else if (input.includes("combinaciones")) {
+    return "Las combinaciones nos dicen cuántas formas diferentes se pueden organizar los elementos. ¿Te gustaría aprender más sobre esto?";
+  } else if (input.includes("permutaciones")) {
+    return "Las permutaciones nos dicen cuántas formas diferentes podemos ordenar los elementos. ¿Te gustaría que te ayudara con ejemplos?";
+  } else if (input.includes("matrices")) {
+    return "Las matrices son arreglos de números. Puedo explicarte cómo sumar, restar y multiplicar matrices.";
+  } else if (input.includes("determinante")) {
+    return "El determinante es un número que se puede calcular a partir de una matriz. ¿Te gustaría aprender cómo calcularlo?";
+  } else if (input.includes("sistemas de ecuaciones")) {
+    return "Los sistemas de ecuaciones son un conjunto de ecuaciones que deben resolverse juntas. Puedo ayudarte con ellos.";
+  } else if (input.includes("líneas rectas")) {
+    return "Las líneas rectas son uno de los conceptos básicos de la geometría. Puedo ayudarte a entender cómo encontrar su pendiente y su ecuación.";
+  } else if (input.includes("pendiente")) {
+    return "La pendiente de una línea recta muestra su inclinación. ¿Te gustaría que calculáramos la pendiente de una línea juntos?";
+  } else if (input.includes("intersección")) {
+    return "La intersección de dos líneas es el punto donde se cruzan. Puedo ayudarte a encontrarlo.";
+  } else if (input.includes("números enteros")) {
+    return "Los números enteros incluyen tanto números positivos como negativos. Puedo ayudarte a realizar operaciones con ellos.";
+  } else if (input.includes("números racionales")) {
+    return "Los números racionales son aquellos que se pueden escribir como una fracción. ¿Te gustaría practicar con algunos ejemplos?";
+  } else if (input.includes("números irracionales")) {
+    return "Los números irracionales no se pueden expresar como una fracción exacta. ¿Te gustaría aprender más sobre ellos?";
+  } else if (input.includes("números reales")) {
+    return "Los números reales incluyen tanto racionales como irracionales. Puedo ayudarte a entender cómo se usan.";
+  } else if (input.includes("números complejos")) {
+    return "Los números complejos tienen una parte imaginaria. ¿Te gustaría que te explicara más sobre ellos?";
+  } else if (input.includes("ecuaciones cuadráticas")) {
+    return "Las ecuaciones cuadráticas tienen la forma ax² + bx + c = 0. Puedo ayudarte a resolverlas usando la fórmula cuadrática.";
+  } else if (input.includes("fórmula cuadrática")) {
+    return "La fórmula cuadrática es utilizada para resolver ecuaciones cuadráticas. ¿Te gustaría ver cómo se aplica?";
+  } else if (input.includes("completar el cuadrado")) {
+    return "Completar el cuadrado es un método para resolver ecuaciones cuadráticas. Puedo explicártelo paso a paso.";
+  } else if (input.includes("método de sustitución")) {
+    return "El método de sustitución es una técnica útil para resolver sistemas de ecuaciones. ¿Te gustaría que te lo explicara?";
+  } else if (input.includes("método de igualación")) {
+    return "El método de igualación es otra técnica para resolver sistemas de ecuaciones. Puedo ayudarte a comprenderlo.";
+  } else if (input.includes("método gráfico")) {
+    return "El método gráfico es útil para resolver sistemas de ecuaciones visualmente. Puedo enseñarte cómo hacerlo.";
+  } else {
+    return "¿Podrías ser más específico en tu pregunta matemática? Estoy aquí para ayudarte con cualquier tema relacionado con las matemáticas.";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("ciencias naturales")) {
+    return "¡Claro! Puedo ayudarte con temas de biología, física, química y más.";
+  } else if (input.includes("físico")) {
+    return "Un físico estudia las propiedades y el comportamiento de la materia y la energía.";
+  } else if (input.includes("química")) {
+    return "La química es la ciencia que estudia la composición, estructura, propiedades y cambios de la materia.";
+  } else if (input.includes("biología")) {
+    return "La biología es el estudio de los seres vivos, su estructura, función, crecimiento y evolución.";
+  } else if (input.includes("fotosíntesis")) {
+    return "La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía, produciendo oxígeno y glucosa.";
+  } else if (input.includes("célula")) {
+    return "La célula es la unidad básica de la vida. Todos los organismos vivos están formados por células.";
+  } else if (input.includes("oxígeno")) {
+    return "El oxígeno es un gas esencial para la respiración de los seres vivos y la combustión.";
+  } else if (input.includes("agua")) {
+    return "El agua es fundamental para la vida. Cubre más del 70% de la superficie terrestre y es vital para los seres vivos.";
+  } else if (input.includes("materia")) {
+    return "La materia es todo aquello que tiene masa y ocupa un lugar en el espacio.";
+  } else if (input.includes("átomos")) {
+    return "Los átomos son las partículas más pequeñas de la materia que mantienen las propiedades de un elemento.";
+  } else if (input.includes("moléculas")) {
+    return "Las moléculas están formadas por dos o más átomos unidos por enlaces químicos.";
+  } else if (input.includes("cambio de estado")) {
+    return "Los cambios de estado de la materia incluyen solidificación, fusión, vaporización, condensación y sublimación.";
+  } else if (input.includes("fuerza")) {
+    return "La fuerza es cualquier interacción que cambia el movimiento de un objeto. Se mide en newtons.";
+  } else if (input.includes("gravedad")) {
+    return "La gravedad es una fuerza de atracción que tiene lugar entre dos masas, como la que mantiene los objetos en la Tierra.";
+  } else if (input.includes("energía")) {
+    return "La energía es la capacidad para realizar trabajo. Existen varias formas, como energía cinética, potencial, térmica, entre otras.";
+  } else if (input.includes("luz")) {
+    return "La luz es una forma de energía que permite la visión. Viaja a través del vacío a una velocidad de aproximadamente 300,000 km/s.";
+  } else if (input.includes("sonido")) {
+    return "El sonido es una vibración que viaja a través de un medio, como el aire, el agua o un sólido.";
+  } else if (input.includes("temperatura")) {
+    return "La temperatura mide el calor o frío de un cuerpo. Se mide en grados Celsius, Fahrenheit o Kelvin.";
+  } else if (input.includes("presión")) {
+    return "La presión es la fuerza ejercida por unidad de área. Se puede medir en pascales (Pa).";
+  } else if (input.includes("volumen")) {
+    return "El volumen es el espacio que ocupa un objeto. Se mide en litros (L), metros cúbicos (m³), entre otros.";
+  } else if (input.includes("masa")) {
+    return "La masa es la cantidad de materia en un objeto y se mide en kilogramos (kg).";
+  } else if (input.includes("densidad")) {
+    return "La densidad es la cantidad de masa por unidad de volumen de un material. Se mide en kg/m³ o g/cm³.";
+  } else if (input.includes("ley de la gravedad")) {
+    return "La ley de la gravedad, formulada por Newton, dice que dos cuerpos se atraen con una fuerza proporcional a sus masas e inversamente proporcional a la distancia entre ellos.";
+  } else if (input.includes("energía cinética")) {
+    return "La energía cinética es la energía que tiene un cuerpo debido a su movimiento.";
+  } else if (input.includes("energía potencial")) {
+    return "La energía potencial es la energía almacenada en un objeto debido a su posición o estado, como un objeto elevado en el aire.";
+  } else if (input.includes("fuerzas de contacto")) {
+    return "Las fuerzas de contacto son fuerzas que requieren que dos objetos estén en contacto físico, como la fricción y la tensión.";
+  } else if (input.includes("fuerzas a distancia")) {
+    return "Las fuerzas a distancia son aquellas que actúan sin necesidad de contacto físico, como la gravedad, el magnetismo o la electricidad.";
+  } else if (input.includes("conservación de la energía")) {
+    return "La ley de conservación de la energía establece que la energía no se crea ni se destruye, solo se transforma de una forma a otra.";
+  } else if (input.includes("ecosistemas")) {
+    return "Un ecosistema es un conjunto de organismos que interactúan entre sí y con su entorno físico en un área determinada.";
+  } else if (input.includes("cadena alimentaria")) {
+    return "La cadena alimentaria muestra cómo la energía fluye de un organismo a otro en un ecosistema.";
+  } else if (input.includes("seres vivos")) {
+    return "Los seres vivos son organismos que tienen características como la capacidad de crecer, reproducirse y responder a estímulos.";
+  } else if (input.includes("plantas")) {
+    return "Las plantas son organismos vivos que producen su propio alimento mediante la fotosíntesis.";
+  } else if (input.includes("animales")) {
+    return "Los animales son organismos que se alimentan de otros seres vivos y tienen un sistema nervioso que les permite moverse y responder a su entorno.";
+  } else if (input.includes("microorganismos")) {
+    return "Los microorganismos son seres vivos microscópicos, como bacterias, virus y hongos, que cumplen funciones importantes en los ecosistemas.";
+  } else if (input.includes("clasificación de los animales")) {
+    return "Los animales se clasifican en grupos como mamíferos, aves, reptiles, anfibios, peces, insectos, entre otros.";
+  } else if (input.includes("reino animal")) {
+    return "El reino animal incluye todos los animales, desde los más simples como las esponjas hasta los más complejos como los mamíferos.";
+  } else if (input.includes("reino vegetal")) {
+    return "El reino vegetal incluye todas las plantas, desde las más simples como musgos hasta las más complejas como los árboles.";
+  } else if (input.includes("planteamiento científico")) {
+    return "El planteamiento científico es el proceso de formular preguntas, hacer observaciones y realizar experimentos para obtener respuestas sobre el mundo natural.";
+  } else if (input.includes("experimento")) {
+    return "Un experimento es una prueba controlada diseñada para investigar una hipótesis o fenómeno científico.";
+  } else if (input.includes("hipótesis")) {
+    return "Una hipótesis es una suposición o predicción que se hace antes de realizar un experimento.";
+  } else if (input.includes("ley científica")) {
+    return "Una ley científica es una declaración que describe un fenómeno natural que ocurre de manera consistente bajo condiciones específicas.";
+  } else if (input.includes("teoría científica")) {
+    return "Una teoría científica es una explicación generalizada basada en evidencia experimental y observaciones repetidas.";
+  } else if (input.includes("ciclo del agua")) {
+    return "El ciclo del agua describe el movimiento del agua a través de la atmósfera, la superficie terrestre y los cuerpos de agua en la Tierra.";
+  } else if (input.includes("evaporación")) {
+    return "La evaporación es el proceso por el cual el agua se convierte en vapor y se eleva hacia la atmósfera.";
+  } else if (input.includes("condensación")) {
+    return "La condensación es el proceso en el que el vapor de agua se enfría y se convierte de nuevo en líquido.";
+  } else if (input.includes("precipitación")) {
+    return "La precipitación es el proceso por el cual el agua en forma de lluvia, nieve o granizo cae desde la atmósfera hacia la Tierra.";
+  } else if (input.includes("filtración")) {
+    return "La filtración es el proceso por el cual el agua se limpia al pasar a través de un material poroso, como el suelo.";
+  } else if (input.includes("planteamiento de problemas")) {
+    return "El planteamiento de problemas es el primer paso en la investigación científica, donde se define claramente el problema a resolver.";
+  } else if (input.includes("balance de los ecosistemas")) {
+    return "El balance de los ecosistemas se refiere al equilibrio entre los organismos y su entorno, asegurando la sostenibilidad del ecosistema.";
+  } else if (input.includes("adaptación")) {
+    return "La adaptación es el proceso por el cual los organismos cambian para sobrevivir mejor en su entorno.";
+  } else if (input.includes("evolución")) {
+    return "La evolución es el proceso por el cual las especies cambian con el tiempo debido a factores como la selección natural.";
+  } else if (input.includes("teoría de la evolución")) {
+    return "La teoría de la evolución, formulada por Charles Darwin, explica cómo las especies evolucionan a lo largo del tiempo mediante la selección natural.";
+  } else if (input.includes("estratificación del suelo")) {
+    return "La estratificación del suelo se refiere a las capas de suelo que se forman debido a la acumulación de materia orgánica y mineral a lo largo del tiempo.";
+  } else if (input.includes("ecosistemas marinos")) {
+    return "Los ecosistemas marinos son ambientes acuáticos que incluyen océanos, mares, arrecifes de coral y estuarios.";
+  } else if (input.includes("ecología")) {
+    return "La ecología es el estudio de las interacciones entre los organismos y su entorno.";
+  } else if (input.includes("biósfera")) {
+    return "La biósfera es la capa de la Tierra donde existe vida, que incluye la tierra, los océanos y la atmósfera.";
+  } else {
+    return "Lo siento, no tengo información sobre ese tema. ¿Te gustaría preguntarme sobre algo relacionado con las ciencias naturales?";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("películas")) {
+    return "¡Claro! Puedo recomendarte películas. ¿Qué tipo de películas te gustan?";
+  } else if (input.includes("acción")) {
+    return "Las películas de acción suelen ser emocionantes y llenas de escenas intensas. ¿Te gustan las de acción?";
+  } else if (input.includes("comedia")) {
+    return "Si te gustan las comedias, te puedo recomendar algunas para que te diviertas mucho.";
+  } else if (input.includes("drama")) {
+    return "Las películas dramáticas suelen ser emotivas y profundas. ¿Te gustan este tipo de películas?";
+  } else if (input.includes("terror")) {
+    return "Las películas de terror son geniales para un buen susto. ¿Te gustaría ver una?";
+  } else if (input.includes("ciencia ficción")) {
+    return "Las películas de ciencia ficción exploran futuros, tecnología y otros mundos. ¿Qué opinas de este género?";
+  } else if (input.includes("romántica")) {
+    return "Las películas románticas son perfectas para una tarde emotiva. ¿Te gustan las historias de amor?";
+  } else if (input.includes("aventura")) {
+    return "Las películas de aventura son perfectas para quienes buscan emoción y descubrimientos. ¿Te gustan las de aventura?";
+  } else if (input.includes("superhéroes")) {
+    return "Las películas de superhéroes como las de Marvel o DC te mantendrán al borde de tu asiento. ¿Tienes un superhéroe favorito?";
+  } else if (input.includes("animación")) {
+    return "Las películas de animación son ideales para todas las edades. ¿Tienes alguna película animada favorita?";
+  } else if (input.includes("Disney")) {
+    return "Disney tiene un gran catálogo de películas y series. ¿Te gustaría hablar de alguna?";
+  } else if (input.includes("Pixar")) {
+    return "Pixar crea películas increíbles como 'Toy Story' y 'Up'. ¿Te gustan sus películas?";
+  } else if (input.includes("Marvel")) {
+    return "El universo Marvel tiene un montón de películas emocionantes. ¿Tienes una película favorita de Marvel?";
+  } else if (input.includes("DC")) {
+    return "Las películas de DC también tienen muchos héroes como Batman y Superman. ¿Cuál es tu favorito?";
+  } else if (input.includes("Harry Potter")) {
+    return "Las películas de Harry Potter son geniales. ¿Te gustaría saber más sobre el mundo mágico?";
+  } else if (input.includes("Star Wars")) {
+    return "Star Wars es una saga épica de ciencia ficción. ¿Eres fan de la saga?";
+  } else if (input.includes("Matrix")) {
+    return "Matrix es una película de ciencia ficción que juega con la realidad y las máquinas. ¿La has visto?";
+  } else if (input.includes("Inception")) {
+    return "Inception es una película de Christopher Nolan que explora los sueños. ¿Te gusta el cine de Nolan?";
+  } else if (input.includes("Avatar")) {
+    return "Avatar es una película de ciencia ficción con efectos visuales impresionantes. ¿La has visto?";
+  } else if (input.includes("Titanic")) {
+    return "Titanic es una película romántica que narra una historia trágica en el famoso barco. ¿Te gustaría saber más?";
+  } else if (input.includes("Sherlock Holmes")) {
+    return "Las películas de Sherlock Holmes, protagonizadas por Robert Downey Jr., son muy emocionantes. ¿Te gustan las películas de misterio?";
+  } else if (input.includes("The Lord of the Rings")) {
+    return "The Lord of the Rings es una saga épica llena de aventura y magia. ¿Eres fan de la saga?";
+  } else if (input.includes("The Hobbit")) {
+    return "The Hobbit es una precuela de El Señor de los Anillos, llena de aventura y criaturas fantásticas.";
+  } else if (input.includes("Jurassic Park")) {
+    return "Jurassic Park es una franquicia de películas sobre dinosaurios clonados. ¿Te gustan las películas de dinosaurios?";
+  } else if (input.includes("Fast & Furious")) {
+    return "Fast & Furious es una serie llena de acción y coches rápidos. ¿Tienes alguna película favorita de la saga?";
+  } else if (input.includes("Mission: Impossible")) {
+    return "Mission: Impossible tiene muchas escenas de acción y suspenso. ¿Te gustan las películas de espías?";
+  } else if (input.includes("James Bond")) {
+    return "Las películas de James Bond son una mezcla de acción y espionaje. ¿Cuál es tu Bond favorito?";
+  } else if (input.includes("The Avengers")) {
+    return "The Avengers reúne a los superhéroes más poderosos del universo Marvel. ¿Tienes un superhéroe favorito de los Vengadores?";
+  } else if (input.includes("Frozen")) {
+    return "Frozen es una película animada de Disney sobre dos hermanas. ¿Te gustan las películas de Disney?";
+  } else if (input.includes("Moana")) {
+    return "Moana es una película animada que nos lleva a una aventura en el océano. ¿Te gusta esta película?";
+  } else if (input.includes("The Lion King")) {
+    return "The Lion King es un clásico de Disney sobre el círculo de la vida. ¿Te gustaría hablar de la película?";
+  } else if (input.includes("Aladdin")) {
+    return "Aladdin es una película de Disney llena de magia y aventuras. ¿Te gustaría saber más sobre ella?";
+  } else if (input.includes("Spider-Man")) {
+    return "Spider-Man es uno de los superhéroes más conocidos de Marvel. ¿Tienes una película de Spider-Man favorita?";
+  } else if (input.includes("Batman")) {
+    return "Batman es uno de los superhéroes más oscuros y épicos. ¿Te gustan sus películas?";
+  } else if (input.includes("Superman")) {
+    return "Superman es el superhéroe con poderes sobrehumanos. ¿Te gustaría hablar sobre sus películas?";
+  } else if (input.includes("Wonder Woman")) {
+    return "Wonder Woman es una superhéroe poderosa y heroica. ¿Te gustan las películas de superhéroes?";
+  } else if (input.includes("The Flash")) {
+    return "The Flash es un superhéroe de DC con velocidad increíble. ¿Te gustan las series de superhéroes?";
+  } else if (input.includes("Arrow")) {
+    return "Arrow es una serie sobre un hombre con habilidades de tiro con arco. ¿Te gustan las series de superhéroes?";
+  } else if (input.includes("Game of Thrones")) {
+    return "Game of Thrones es una serie épica llena de intriga política y dragones. ¿Eres fan de la serie?";
+  } else if (input.includes("Stranger Things")) {
+    return "Stranger Things es una serie de ciencia ficción y misterio. ¿Te gusta el estilo de los años 80?";
+  } else if (input.includes("The Witcher")) {
+    return "The Witcher es una serie basada en libros sobre un cazador de monstruos. ¿La has visto?";
+  } else if (input.includes("Breaking Bad")) {
+    return "Breaking Bad es una serie de drama sobre un profesor de química convertido en traficante de metanfetaminas. ¿La has visto?";
+  } else if (input.includes("Friends")) {
+    return "Friends es una serie de comedia sobre un grupo de amigos en Nueva York. ¿Es tu serie de comedia favorita?";
+  } else if (input.includes("The Office")) {
+    return "The Office es una comedia que se desarrolla en una oficina. ¿Te gustaría saber más sobre ella?";
+  } else if (input.includes("The Simpsons")) {
+    return "Los Simpsons es una serie de dibujos animados sobre una familia disfuncional. ¿Te gustan los Simpsons?";
+  } else if (input.includes("Rick and Morty")) {
+    return "Rick and Morty es una serie animada de ciencia ficción y comedia. ¿Te gustan las series de animación adultas?";
+  } else if (input.includes("South Park")) {
+    return "South Park es una serie animada conocida por su humor satírico. ¿Te gusta este tipo de humor?";
+  } else if (input.includes("Dragon Ball")) {
+    return "Dragon Ball es una serie de anime que sigue las aventuras de Goku. ¿Te gusta este anime?";
+  } else if (input.includes("Naruto")) {
+    return "Naruto es un anime sobre un joven ninja llamado Naruto Uzumaki. ¿Te gusta el anime?";
+  } else if (input.includes("One Piece")) {
+    return "One Piece es una serie de anime sobre piratas y aventuras. ¿Te gustaría saber más sobre One Piece?";
+  } else if (input.includes("SpongeBob SquarePants")) {
+    return "SpongeBob SquarePants es un dibujo animado sobre un esponja en el fondo del mar. ¿Te gusta este show?";
+  } else if (input.includes("Peppa Pig")) {
+    return "Peppa Pig es una serie para niños sobre una cerdita y su familia. ¿Te gustaría saber más sobre Peppa Pig?";
+  } else if (input.includes("Tom and Jerry")) {
+    return "Tom and Jerry es un clásico dibujo animado sobre un gato y un ratón. ¿Te gustan este tipo de dibujos?";
+  } else if (input.includes("Scooby-Doo")) {
+    return "Scooby-Doo es una serie sobre un perro y su grupo de amigos que resuelven misterios. ¿Te gustaría saber más?";
+  } else if (input.includes("Looney Tunes")) {
+    return "Looney Tunes es una serie de dibujos animados con personajes como Bugs Bunny y el Pato Lucas. ¿Te gustan los Looney Tunes?";
+  } else if (input.includes("Teen Titans")) {
+    return "Teen Titans es una serie de superhéroes jóvenes, ¿te gusta esta serie?";
+  } else if (input.includes("Adventure Time")) {
+    return "Adventure Time es una serie de animación sobre las aventuras de Finn y Jake en la Tierra de Ooo. ¿La has visto?";
+  } else if (input.includes("Pokemon")) {
+    return "Pokemon es una serie de anime sobre criaturas que los entrenadores capturan. ¿Te gusta este anime?";
+  } else if (input.includes("He-Man")) {
+    return "He-Man es una serie de los años 80 sobre un héroe luchando contra el mal. ¿Te gustan los clásicos?";
+  } else if (input.includes("Transformers")) {
+    return "Transformers es una franquicia sobre robots que se transforman en vehículos. ¿Te gusta la serie?";
+  } else if (input.includes("Thundercats")) {
+    return "Thundercats es una serie sobre un grupo de guerreros felinos. ¿Te gustaría saber más?";
+  } else if (input.includes("G.I. Joe")) {
+    return "G.I. Joe es una serie sobre un equipo de élite que lucha contra el mal. ¿Te gustan las series de acción?";
+  } else {
+    return "Lo siento, no tengo información sobre ese tema. ¿Te gustaría preguntar sobre algo más relacionado con películas, series o dibujos animados?";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("recomiéndame una película")) {
+    return "Claro, ¿qué tipo de película te gustaría ver? ¿Acción, comedia, drama o algo diferente?";
+  } else if (input.includes("algo para ver")) {
+    return "¡Tengo algunas recomendaciones! ¿Prefieres una película o una serie?";
+  } else if (input.includes("película de acción")) {
+    return "Si te gustan las películas de acción, te recomiendo 'Mad Max: Fury Road' o 'John Wick'. ¡Son muy emocionantes!";
+  } else if (input.includes("película de comedia")) {
+    return "Para una buena risa, te sugiero 'Superbad' o 'La La Land'. ¡Son muy divertidas!";
+  } else if (input.includes("película de terror")) {
+    return "Si te gustan las películas de terror, 'El Conjuro' y 'Hereditary' son excelentes opciones.";
+  } else if (input.includes("película de ciencia ficción")) {
+    return "Si te gusta la ciencia ficción, 'Interstellar' o 'Blade Runner 2049' son increíbles.";
+  } else if (input.includes("serie para ver")) {
+    return "Te puedo recomendar series como 'Stranger Things' o 'Breaking Bad'. ¿Te gustan las series de suspenso?";
+  } else if (input.includes("comedia ligera")) {
+    return "Si buscas una comedia ligera, puedes ver 'Friends' o 'The Office'. Son perfectas para relajarse.";
+  } else if (input.includes("documental")) {
+    return "Si te gustan los documentales, 'Cosmos' o 'Making a Murderer' son bastante interesantes.";
+  } else if (input.includes("recomendación para ver en pareja")) {
+    return "Si vas a ver algo en pareja, te sugiero películas románticas como 'The Notebook' o 'P.D. Te Amo'. Son perfectas para ese momento.";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("relación de novios")) {
+    return "Las relaciones de novios requieren confianza, comunicación y respeto. ¿Cómo va tu relación?";
+  } else if (input.includes("relación de amistad")) {
+    return "La amistad se basa en la confianza y el apoyo mutuo. ¿Tienes algún amigo cercano con quien compartir todo?";
+  } else if (input.includes("mi novia")) {
+    return "¡Qué bonito! ¿Cómo van las cosas con tu novia? ¿Hay algo que te gustaría compartir o preguntar sobre relaciones?";
+  } else if (input.includes("novio")) {
+    return "¿Tu novio te trata bien? Las relaciones deben ser de apoyo y respeto mutuo.";
+  } else if (input.includes("cómo mejorar mi relación")) {
+    return "Para mejorar tu relación, es clave comunicarte sinceramente, pasar tiempo juntos y resolver cualquier malentendido.";
+  } else if (input.includes("comunicación en la relación")) {
+    return "La comunicación es fundamental en cualquier relación. Es importante hablar sobre lo que piensas y cómo te sientes.";
+  } else if (input.includes("confianza en la relación")) {
+    return "La confianza es la base de cualquier relación sólida. ¿Confías plenamente en tu pareja?";
+  } else if (input.includes("ser amigo de mi pareja")) {
+    return "Ser amigo de tu pareja es muy importante. La amistad fortalece la relación romántica.";
+  } else if (input.includes("mi amistad con alguien")) {
+    return "Las amistades son una de las relaciones más importantes en la vida. ¿Tienes una amistad que te gustaría fortalecer?";
+  } else if (input.includes("relación saludable")) {
+    return "Una relación saludable es aquella donde ambos se apoyan, se respetan y se comunican de manera abierta.";
+  } else if (input.includes("relación a distancia")) {
+    return "Las relaciones a distancia requieren confianza y esfuerzo. Es importante mantener la comunicación constante.";
+  } else if (input.includes("mi pareja y yo tenemos problemas")) {
+    return "Si tu pareja y tú están teniendo problemas, lo mejor es hablar con sinceridad y buscar soluciones juntos.";
+  } else if (input.includes("sentirse celoso en una relación")) {
+    return "El celosismo puede ser un desafío en una relación. Es importante hablar de estos sentimientos con tu pareja para evitar malentendidos.";
+  } else if (input.includes("cómo confiar más en mi pareja")) {
+    return "La confianza se construye con el tiempo y la sinceridad. ¿Qué cosas te hacen sentir inseguro en la relación?";
+  } else if (input.includes("problemas con un amigo")) {
+    return "Los problemas entre amigos son comunes. Lo más importante es la honestidad y tratar de entender el punto de vista del otro.";
+  } else if (input.includes("terminar con mi novio")) {
+    return "Terminar una relación nunca es fácil. Es importante ser honesto y respetuoso con los sentimientos de ambos.";
+  } else if (input.includes("sentimientos de amistad")) {
+    return "Las amistades son relaciones muy especiales. ¿Te gustaría saber cómo fortalecer tu amistad con alguien?";
+  } else if (input.includes("cómo llevar una buena relación")) {
+    return "Para llevar una buena relación, es necesario tener confianza, ser honesto y compartir momentos juntos.";
+  } else if (input.includes("relaciones tóxicas")) {
+    return "Las relaciones tóxicas pueden ser muy dañinas. Es importante reconocer los signos y salir de ellas para tu bienestar.";
+  } else if (input.includes("mi amiga me traicionó")) {
+    return "Es doloroso cuando un amigo te traiciona. Hablar con ella sobre lo que sucedió podría ayudar a sanar la situación.";
+  } else if (input.includes("conflictos en pareja")) {
+    return "Los conflictos son normales, pero lo más importante es cómo los resuelves. ¿Ya intentaste hablar con tu pareja sobre esto?";
+  } else if (input.includes("gestos románticos")) {
+    return "Los gestos románticos, como una carta o una sorpresa, pueden hacer que la relación sea más especial. ¿Has hecho algo romántico por tu pareja?";
+  } else if (input.includes("reconciliación después de una pelea")) {
+    return "La reconciliación requiere humildad y honestidad. ¿Te gustaría saber cómo hacerlo después de una pelea con tu pareja?";
+  } else if (input.includes("me siento solo en mi relación")) {
+    return "Es normal sentirse solo a veces. Hablar con tu pareja sobre cómo te sientes puede ayudar a mejorar la conexión.";
+  } else if (input.includes("amistad verdadera")) {
+    return "Una verdadera amistad es aquella en la que ambos se apoyan y son sinceros. ¿Tienes un amigo verdadero en quien confíes?";
+  } else if (input.includes("reconciliarme con mi amiga")) {
+    return "Para reconciliarte con una amiga, es importante ser honesto, pedir disculpas si es necesario y trabajar en el entendimiento mutuo.";
+  } else if (input.includes("hacer feliz a mi novia")) {
+    return "Hacer feliz a tu novia puede ser tan simple como escucharla, pasar tiempo con ella y sorprenderla con pequeños detalles.";
+  } else if (input.includes("mi amiga está distante")) {
+    return "Si tu amiga está distante, podría ser útil hablar con ella y preguntarle cómo está. A veces, las personas pasan por momentos difíciles.";
+  } else if (input.includes("qué hacer cuando me siento celoso")) {
+    return "El celosismo puede ser una emoción difícil de manejar. Lo importante es hablar de lo que sientes con tu pareja para aclarar cualquier malentendido.";
+  } else if (input.includes("cómo saber si es la persona correcta")) {
+    return "La persona correcta en una relación te hace sentir amado, respetado y apoyado. ¿Cómo te sientes en tu relación?";
+  } else if (input.includes("enfrentar problemas con mi novio")) {
+    return "Es importante enfrentar los problemas en pareja con respeto y sinceridad. ¿Has hablado con él sobre lo que te preocupa?";
+  } else if (input.includes("amistad y amor")) {
+    return "El amor y la amistad pueden ir de la mano. Si tienes una relación con tu mejor amigo o amiga, ¡es algo muy especial!";
+  } else if (input.includes("mi amiga está celosa")) {
+    return "Si tu amiga está celosa, tal vez es una buena idea hablar con ella y comprender sus sentimientos para resolver la situación.";
+  } else if (input.includes("me siento incomprendido por mi pareja")) {
+    return "Es difícil cuando te sientes incomprendido. Hablar de tus emociones con tu pareja puede ayudar a mejorar la situación.";
+  } else if (input.includes("cómo fortalecer la relación de pareja")) {
+    return "Para fortalecer una relación, es clave pasar tiempo de calidad juntos, comunicarte abiertamente y cuidar el respeto mutuo.";
+  } else if (input.includes("perdí la confianza en mi amiga")) {
+    return "Si has perdido la confianza en tu amiga, podría ser útil hablar sobre lo que sucedió y tratar de encontrar una solución.";
+  } else if (input.includes("decirle a mi amiga lo que siento")) {
+    return "Decirle a tu amiga lo que sientes es importante para mantener la relación sincera. ¿Te gustaría recibir algún consejo sobre cómo hacerlo?";
+  } else if (input.includes("tengo miedo de perder a mi novia")) {
+    return "Es natural tener miedo a perder a alguien a quien amas. Lo importante es trabajar en la relación y comunicarte con ella para asegurarte de que ambos estén felices.";
+  } else if (input.includes("relación sana")) {
+    return "Una relación sana se basa en el respeto mutuo, la confianza, y el apoyo. ¿Te gustaría saber más sobre cómo mantener una relación sana?";
+  } else if (input.includes("cómo ser un buen amigo")) {
+    return "Ser un buen amigo implica ser confiable, escuchar y estar allí para la otra persona en los momentos buenos y malos.";
+  } else if (input.includes("mi amiga está pasando por un mal momento")) {
+    return "Si tu amiga está pasando por un mal momento, lo mejor es brindarle tu apoyo y escucharla. A veces solo necesitamos a alguien que nos escuche.";
+  } else if (input.includes("pareja y amigos a la vez")) {
+    return "Es posible ser pareja y amigos al mismo tiempo, ya que una buena amistad puede fortalecer la relación romántica.";
+  } else if (input.includes("cómo dar espacio en una relación")) {
+    return "Dar espacio en una relación es importante para que ambos puedan mantener su individualidad y bienestar. Hablar de las necesidades de espacio puede ser útil.";
+  } else if (input.includes("cómo hacer feliz a un amigo")) {
+    return "Hacer feliz a un amigo puede ser tan simple como pasar tiempo juntos, escuchar sus preocupaciones y estar allí cuando te necesite.";
+  } else if (input.includes("me siento atrapado en la relación")) {
+    return "Es importante que te sientas libre y feliz en tu relación. Si te sientes atrapado, es importante hablar de tus sentimientos con tu pareja.";
+  } else if (input.includes("mi pareja no me comprende")) {
+    return "Si sientes que tu pareja no te comprende, la comunicación abierta puede ayudar a resolver el malentendido y acercarse más.";
+  } else {
+    return "Lo siento, no tengo una respuesta para eso. ¿Te gustaría preguntar sobre algo más relacionado con relaciones o amistades?";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("relación de novios")) {
+    return "Las relaciones de novios requieren confianza, comunicación y respeto. ¿Cómo va tu relación?";
+  } else if (input.includes("relación de amistad")) {
+    return "La amistad se basa en la confianza y el apoyo mutuo. ¿Tienes algún amigo cercano con quien compartir todo?";
+  } else if (input.includes("mi novia")) {
+    return "¡Qué bonito! ¿Cómo van las cosas con tu novia? ¿Hay algo que te gustaría compartir o preguntar sobre relaciones?";
+  } else if (input.includes("novio")) {
+    return "¿Tu novio te trata bien? Las relaciones deben ser de apoyo y respeto mutuo.";
+  } else if (input.includes("cómo mejorar mi relación")) {
+    return "Para mejorar tu relación, es clave comunicarte sinceramente, pasar tiempo juntos y resolver cualquier malentendido.";
+  } else if (input.includes("comunicación en la relación")) {
+    return "La comunicación es fundamental en cualquier relación. Es importante hablar sobre lo que piensas y cómo te sientes.";
+  } else if (input.includes("confianza en la relación")) {
+    return "La confianza es la base de cualquier relación sólida. ¿Confías plenamente en tu pareja?";
+  } else if (input.includes("ser amigo de mi pareja")) {
+    return "Ser amigo de tu pareja es muy importante. La amistad fortalece la relación romántica.";
+  } else if (input.includes("mi amistad con alguien")) {
+    return "Las amistades son una de las relaciones más importantes en la vida. ¿Tienes una amistad que te gustaría fortalecer?";
+  } else if (input.includes("relación saludable")) {
+    return "Una relación saludable es aquella donde ambos se apoyan, se respetan y se comunican de manera abierta.";
+  } else if (input.includes("relación a distancia")) {
+    return "Las relaciones a distancia requieren confianza y esfuerzo. Es importante mantener la comunicación constante.";
+  } else if (input.includes("mi pareja y yo tenemos problemas")) {
+    return "Si tu pareja y tú están teniendo problemas, lo mejor es hablar con sinceridad y buscar soluciones juntos.";
+  } else if (input.includes("sentirse celoso en una relación")) {
+    return "El celosismo puede ser un desafío en una relación. Es importante hablar de estos sentimientos con tu pareja para evitar malentendidos.";
+  } else if (input.includes("cómo confiar más en mi pareja")) {
+    return "La confianza se construye con el tiempo y la sinceridad. ¿Qué cosas te hacen sentir inseguro en la relación?";
+  } else if (input.includes("problemas con un amigo")) {
+    return "Los problemas entre amigos son comunes. Lo más importante es la honestidad y tratar de entender el punto de vista del otro.";
+  } else if (input.includes("terminar con mi novio")) {
+    return "Terminar una relación nunca es fácil. Es importante ser honesto y respetuoso con los sentimientos de ambos.";
+  } else if (input.includes("sentimientos de amistad")) {
+    return "Las amistades son relaciones muy especiales. ¿Te gustaría saber cómo fortalecer tu amistad con alguien?";
+  } else if (input.includes("cómo llevar una buena relación")) {
+    return "Para llevar una buena relación, es necesario tener confianza, ser honesto y compartir momentos juntos.";
+  } else if (input.includes("relaciones tóxicas")) {
+    return "Las relaciones tóxicas pueden ser muy dañinas. Es importante reconocer los signos y salir de ellas para tu bienestar.";
+  } else if (input.includes("mi amiga me traicionó")) {
+    return "Es doloroso cuando un amigo te traiciona. Hablar con ella sobre lo que sucedió podría ayudar a sanar la situación.";
+  } else if (input.includes("conflictos en pareja")) {
+    return "Los conflictos son normales, pero lo más importante es cómo los resuelves. ¿Ya intentaste hablar con tu pareja sobre esto?";
+  } else if (input.includes("gestos románticos")) {
+    return "Los gestos románticos, como una carta o una sorpresa, pueden hacer que la relación sea más especial. ¿Has hecho algo romántico por tu pareja?";
+  } else if (input.includes("reconciliación después de una pelea")) {
+    return "La reconciliación requiere humildad y honestidad. ¿Te gustaría saber cómo hacerlo después de una pelea con tu pareja?";
+  } else if (input.includes("me siento solo en mi relación")) {
+    return "Es normal sentirse solo a veces. Hablar con tu pareja sobre cómo te sientes puede ayudar a mejorar la conexión.";
+  } else if (input.includes("amistad verdadera")) {
+    return "Una verdadera amistad es aquella en la que ambos se apoyan y son sinceros. ¿Tienes un amigo verdadero en quien confíes?";
+  } else if (input.includes("reconciliarme con mi amiga")) {
+    return "Para reconciliarte con una amiga, es importante ser honesto, pedir disculpas si es necesario y trabajar en el entendimiento mutuo.";
+  } else if (input.includes("hacer feliz a mi novia")) {
+    return "Hacer feliz a tu novia puede ser tan simple como escucharla, pasar tiempo con ella y sorprenderla con pequeños detalles.";
+  } else if (input.includes("mi amiga está distante")) {
+    return "Si tu amiga está distante, podría ser útil hablar con ella y preguntarle cómo está. A veces, las personas pasan por momentos difíciles.";
+  } else if (input.includes("qué hacer cuando me siento celoso")) {
+    return "El celosismo puede ser una emoción difícil de manejar. Lo importante es hablar de lo que sientes con tu pareja para aclarar cualquier malentendido.";
+  } else if (input.includes("cómo saber si es la persona correcta")) {
+    return "La persona correcta en una relación te hace sentir amado, respetado y apoyado. ¿Cómo te sientes en tu relación?";
+  } else if (input.includes("enfrentar problemas con mi novio")) {
+    return "Es importante enfrentar los problemas en pareja con respeto y sinceridad. ¿Has hablado con él sobre lo que te preocupa?";
+  } else if (input.includes("amistad y amor")) {
+    return "El amor y la amistad pueden ir de la mano. Si tienes una relación con tu mejor amigo o amiga, ¡es algo muy especial!";
+  } else if (input.includes("mi amiga está celosa")) {
+    return "Si tu amiga está celosa, tal vez es una buena idea hablar con ella y comprender sus sentimientos para resolver la situación.";
+  } else if (input.includes("me siento incomprendido por mi pareja")) {
+    return "Es difícil cuando te sientes incomprendido. Hablar de tus emociones con tu pareja puede ayudar a mejorar la situación.";
+  } else if (input.includes("cómo fortalecer la relación de pareja")) {
+    return "Para fortalecer una relación, es clave pasar tiempo de calidad juntos, comunicarte abiertamente y cuidar el respeto mutuo.";
+  } else if (input.includes("perdí la confianza en mi amiga")) {
+    return "Si has perdido la confianza en tu amiga, podría ser útil hablar sobre lo que sucedió y tratar de encontrar una solución.";
+  } else if (input.includes("decirle a mi amiga lo que siento")) {
+    return "Decirle a tu amiga lo que sientes es importante para mantener la relación sincera. ¿Te gustaría recibir algún consejo sobre cómo hacerlo?";
+  } else if (input.includes("tengo miedo de perder a mi novia")) {
+    return "Es natural tener miedo a perder a alguien a quien amas. Lo importante es trabajar en la relación y comunicarte con ella para asegurarte de que ambos estén felices.";
+  } else if (input.includes("relación sana")) {
+    return "Una relación sana se basa en el respeto mutuo, la confianza, y el apoyo. ¿Te gustaría saber más sobre cómo mantener una relación sana?";
+  } else if (input.includes("cómo ser un buen amigo")) {
+    return "Ser un buen amigo implica ser confiable, escuchar y estar allí para la otra persona en los momentos buenos y malos.";
+  } else if (input.includes("mi amiga está pasando por un mal momento")) {
+    return "Si tu amiga está pasando por un mal momento, lo mejor es brindarle tu apoyo y escucharla. A veces solo necesitamos a alguien que nos escuche.";
+  } else if (input.includes("pareja y amigos a la vez")) {
+    return "Es posible ser pareja y amigos al mismo tiempo, ya que una buena amistad puede fortalecer la relación romántica.";
+  } else if (input.includes("cómo dar espacio en una relación")) {
+    return "Dar espacio en una relación es importante para que ambos puedan mantener su individualidad y bienestar. Hablar de las necesidades de espacio puede ser útil.";
+  } else if (input.includes("cómo hacer feliz a un amigo")) {
+    return "Hacer feliz a un amigo puede ser tan simple como pasar tiempo juntos, escuchar sus preocupaciones y estar allí cuando te necesite.";
+  } else if (input.includes("me siento atrapado en la relación")) {
+    return "Es importante que te sientas libre y feliz en tu relación. Si te sientes atrapado, es importante hablar de tus sentimientos con tu pareja.";
+  } else if (input.includes("mi pareja no me comprende")) {
+    return "Si sientes que tu pareja no te comprende, la comunicación abierta puede ayudar a resolver el malentendido y acercarse más.";
+  } else {
+    return "Lo siento, no tengo una respuesta para eso. ¿Te gustaría preguntar sobre algo más relacionado con relaciones o amistades?";
+  }
+}
+function getBotResponse(input) {
+  if (input.includes("tristeza")) {
+    return "Lamento que te sientas triste. A veces es útil hablar de lo que te pasa o hacer algo que te guste.";
+  } else if (input.includes("ansiedad")) {
+    return "La ansiedad puede ser difícil de manejar. Respirar profundamente y tomar descansos puede ayudarte a calmarte.";
+  } else if (input.includes("estrés")) {
+    return "El estrés es algo común. Tómate un momento para relajarte y respira profundamente. Todo estará bien.";
+  } else if (input.includes("soledad")) {
+    return "La soledad es algo que todos experimentamos en algún momento. Hablar con alguien cercano puede ayudarte a sentirte mejor.";
+  } else if (input.includes("triste")) {
+    return "Siento mucho que te sientas triste. A veces compartir tus sentimientos con alguien puede aliviar un poco el dolor.";
+  } else if (input.includes("depresión")) {
+    return "Si te sientes deprimido, es importante hablar con un profesional. No estás solo en esto.";
+  } else if (input.includes("miedo")) {
+    return "El miedo puede ser aterrador, pero es una emoción natural. Enfrentarlo poco a poco puede ayudarte a superarlo.";
+  } else if (input.includes("dudas")) {
+    return "Es normal tener dudas. A veces hablar sobre lo que te preocupa puede darte claridad y apoyo.";
+  } else if (input.includes("preocupado")) {
+    return "Te entiendo, es normal estar preocupado de vez en cuando. Tómate un descanso y recuerda que todo tiene solución.";
+  } else if (input.includes("frustración")) {
+    return "La frustración puede ser un sentimiento intenso. Respira hondo y trata de ver las cosas con calma, todo tiene una solución.";
+  } else if (input.includes("inseguridad")) {
+    return "La inseguridad es algo que todos sentimos en algún momento. Recuerda que tus cualidades y talentos son valiosos.";
+  } else if (input.includes("cansado")) {
+    return "Parece que necesitas descansar. La fatiga puede afectar tu ánimo, pero con un buen descanso te sentirás renovado.";
+  } else if (input.includes("estresado")) {
+    return "Cuando te sientas estresado, intenta tomarte un pequeño descanso y hacer algo que te relaje, como escuchar música o dar un paseo.";
+  } else if (input.includes("abrumado")) {
+    return "Sentirse abrumado es completamente normal en ciertas situaciones. Trata de dividir las tareas en partes más pequeñas y manejables.";
+  } else if (input.includes("afectado")) {
+    return "Si algo te ha afectado, es importante hablar sobre ello. No tienes que lidiar con todo solo.";
+  } else if (input.includes("confusión")) {
+    return "La confusión es común cuando tienes que tomar decisiones importantes. Tómate tu tiempo para pensar en lo que realmente necesitas.";
+  } else if (input.includes("problemas familiares")) {
+    return "Los problemas familiares pueden ser difíciles. A veces hablar sobre ellos con alguien de confianza puede ayudarte a aliviarlos.";
+  } else if (input.includes("problemas de pareja")) {
+    return "Es normal tener dificultades en una relación. La comunicación abierta y honesta es clave para resolver conflictos.";
+  } else if (input.includes("amigos")) {
+    return "Los amigos son una fuente importante de apoyo. Si necesitas hablar, siempre es bueno confiar en ellos.";
+  } else if (input.includes("quebranto emocional")) {
+    return "Un quebranto emocional puede ser muy difícil de superar. A veces, un pequeño paso hacia la sanación puede hacer una gran diferencia.";
+  } else if (input.includes("perdón")) {
+    return "El perdón puede ser un proceso liberador. A veces perdonarnos a nosotros mismos es el primer paso hacia la paz interior.";
+  } else if (input.includes("enfermedad")) {
+    return "Lidiar con una enfermedad puede ser abrumador, pero recuerda que cada día es una nueva oportunidad para sanar.";
+  } else if (input.includes("desconfianza")) {
+    return "La desconfianza puede dañar relaciones importantes. Hablar sobre lo que te molesta puede ayudarte a restaurarla.";
+  } else if (input.includes("duelo")) {
+    return "El duelo es un proceso personal y único. Permítete sentir lo que necesites para poder sanar poco a poco.";
+  } else if (input.includes("falta de motivación")) {
+    return "La falta de motivación es algo que todos experimentamos en algún momento. Establecer metas pequeñas y alcanzables puede ayudarte a recuperar la energía.";
+  } else if (input.includes("preocupaciones")) {
+    return "Las preocupaciones pueden ser agotadoras. Hablar sobre ellas te puede ayudar a aliviarlas y a encontrar una solución.";
+  } else if (input.includes("solidaridad")) {
+    return "La solidaridad es muy poderosa. Si te rodeas de personas solidarias, podrás encontrar apoyo en tiempos difíciles.";
+  } else if (input.includes("cambio")) {
+    return "El cambio puede generar incertidumbre, pero también es una oportunidad de crecimiento. Tómalo un paso a la vez.";
+  } else if (input.includes("necesito apoyo")) {
+    return "Es completamente válido necesitar apoyo. Hablar con alguien de confianza puede hacerte sentir más aliviado y comprendido.";
+  } else if (input.includes("valentía")) {
+    return "La valentía no es la ausencia de miedo, sino la capacidad de enfrentarlo. Tú eres más fuerte de lo que piensas.";
+  } else if (input.includes("tristeza profunda")) {
+    return "La tristeza profunda puede ser dolorosa, pero es importante recordar que siempre hay esperanza para la sanación.";
+  } else if (input.includes("superar la tristeza")) {
+    return "Superar la tristeza es un proceso. Permítete sentir lo que necesitas y poco a poco encontrarás la paz.";
+  } else if (input.includes("dificultades emocionales")) {
+    return "Las dificultades emocionales son parte de la vida. Buscar ayuda y hablar de lo que te pasa te puede ayudar a sobrellevarlas.";
+  } else if (input.includes("necesito descansar")) {
+    return "Es importante escuchar a tu cuerpo cuando necesita descanso. Asegúrate de darte tiempo para ti mismo.";
+  } else if (input.includes("escuchar")) {
+    return "A veces, lo que más necesitamos es ser escuchados. Si quieres hablar, estoy aquí para escucharte.";
+  } else if (input.includes("estrés en el trabajo")) {
+    return "El estrés en el trabajo es muy común. Tómate breves descansos, organiza tus tareas y no olvides cuidar de ti mismo.";
+  } else if (input.includes("desaprecio")) {
+    return "El desaprecio puede ser doloroso, pero recuerda que tu valor no depende de la opinión de los demás.";
+  } else if (input.includes("nervios")) {
+    return "Los nervios son naturales antes de algo importante. Respira profundamente y confía en tus habilidades.";
+  } else if (input.includes("autoestima")) {
+    return "La autoestima es clave para tu bienestar emocional. Eres valioso tal y como eres.";
+  } else if (input.includes("problemas emocionales")) {
+    return "Los problemas emocionales son una parte normal de la vida. Hablar con alguien o buscar ayuda profesional puede ser útil.";
+  } else if (input.includes("falta de apoyo")) {
+    return "La falta de apoyo puede ser difícil de manejar. Busca personas en las que confíes y permite que te ayuden.";
+  } else if (input.includes("resiliencia")) {
+    return "La resiliencia es la capacidad de superar las dificultades. Cada vez que enfrentas un desafío, creces un poco más.";
+  } else if (input.includes("conflictos internos")) {
+    return "Los conflictos internos pueden ser confusos. A veces hablar sobre lo que sientes puede ayudarte a encontrar claridad.";
+  } else if (input.includes("emoción controlada")) {
+    return "Controlar las emociones no significa reprimirlas, sino aprender a gestionarlas para que no afecten tu bienestar.";
+  } else if (input.includes("culpa")) {
+    return "La culpa es una emoción humana, pero es importante perdonarte y aprender de las situaciones.";
+  } else if (input.includes("preocupaciones sobre el futuro")) {
+    return "El futuro puede ser incierto, pero lo importante es concentrarse en el presente y tomar las decisiones que puedas ahora.";
+  } else if (input.includes("sentimiento de vacío")) {
+    return "El vacío puede sentirse abrumador, pero a veces es solo una señal de que necesitas un cambio o un nuevo propósito.";
+  } else if (input.includes("apoyo en momentos difíciles")) {
+    return "El apoyo en momentos difíciles es esencial. Puedes buscar ayuda en amigos, familiares o incluso profesionales.";
+  } else if (input.includes("desconfianza en mí mismo")) {
+    return "La desconfianza en uno mismo puede ser desafiante, pero es importante reconocer tus logros y trabajar en tus fortalezas.";
+  } else if (input.includes("falta de confianza en los demás")) {
+    return "La falta de confianza en los demás puede venir de experiencias pasadas, pero recuerda que no todas las personas son iguales.";
+  } else if (input.includes("necesito hablar")) {
+    return "Si necesitas hablar, aquí estoy para escucharte. A veces solo compartir lo que sientes puede hacer una gran diferencia.";
+  } else if (input.includes("pensamientos negativos")) {
+    return "Los pensamientos negativos pueden ser perjudiciales. A veces cambiar de perspectiva y enfocarte en lo positivo puede ayudarte.";
+  } else if (input.includes("necesito cambiar mi vida")) {
+    return "El cambio es posible, pero comienza con pequeños pasos. ¿Qué aspecto de tu vida te gustaría mejorar primero?";
+  } else if (input.includes("calma emocional")) {
+    return "Encontrar calma emocional es importante. Técnicas como la meditación o la respiración profunda pueden ayudarte a centrarte.";
+  } else if (input.includes("soledad interna")) {
+    return "La soledad interna puede ser difícil de manejar, pero recuerda que tienes dentro de ti la capacidad de sanar y encontrar paz.";
+  }
+}
+
     function getBotResponse(input) {
         if (input.includes("hola")) {
           return "¡Hola! ¿Cómo estás?";
