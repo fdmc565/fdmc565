@@ -625,7 +625,7 @@ if (input.includes("estoy triste")) return "Lamento escuchar eso. Estoy aquí pa
     if (input.includes("me siento decepcionado de mí mismo")) return "Sé amable contigo mismo. Nadie es perfecto.";
     if (input.includes("quisiera ser alguien más")) return "Eres único y valioso tal como eres.";
     if (input.includes("me siento sin esperanza")) return "Las cosas pueden mejorar, aunque ahora parezca difícil.";
-    function getBotResponse(input) {
+ {
   if (input.includes("sabes hacer")) {
     return "Sé muchas cosas, como contar chistes, contar historias y ayudarte con lo que necesites.";
   } else if (input.includes("puedes hacer")) {
@@ -772,8 +772,7 @@ if (input.includes("estoy triste")) return "Lamento escuchar eso. Estoy aquí pa
     return "Sé cómo aprender más rápido y de manera más efectiva. ¿Te gustaría saber más?";
   } else if (input.includes("gestionar proyectos")) {
     return "Sé cómo gestionar proyectos con éxito. ¿Tienes algún proyecto en mente?";
-  } else {
-    return "No estoy seguro de lo que preguntas, pero si me dices más, estaré feliz de ayudarte.";
+
   }
 }
 function getBotResponse(input) {
@@ -869,8 +868,7 @@ function getBotResponse(input) {
     return "El método de igualación es otra técnica para resolver sistemas de ecuaciones. Puedo ayudarte a comprenderlo.";
   } else if (input.includes("método gráfico")) {
     return "El método gráfico es útil para resolver sistemas de ecuaciones visualmente. Puedo enseñarte cómo hacerlo.";
-  } else {
-    return "¿Podrías ser más específico en tu pregunta matemática? Estoy aquí para ayudarte con cualquier tema relacionado con las matemáticas.";
+
   }
 }
 function getBotResponse(input) {
@@ -986,8 +984,7 @@ function getBotResponse(input) {
     return "La ecología es el estudio de las interacciones entre los organismos y su entorno.";
   } else if (input.includes("biósfera")) {
     return "La biósfera es la capa de la Tierra donde existe vida, que incluye la tierra, los océanos y la atmósfera.";
-  } else {
-    return "Lo siento, no tengo información sobre ese tema. ¿Te gustaría preguntarme sobre algo relacionado con las ciencias naturales?";
+
   }
 }
 function getBotResponse(input) {
@@ -1448,9 +1445,6 @@ function getBotResponse(input) {
   } else if (input.includes("soledad interna")) {
     return "La soledad interna puede ser difícil de manejar, pero recuerda que tienes dentro de ti la capacidad de sanar y encontrar paz.";
   }
-}
-
-    function getBotResponse(input) {
         if (input.includes("hola")) {
           return "¡Hola! ¿Cómo estás?";
         } else if (input.includes("adiós")) {
@@ -1602,9 +1596,6 @@ function getBotResponse(input) {
 
 return "...";
 
-
-
-return "Interesante... ¿Quieres contarme más sobre eso?";
 
     
 }
