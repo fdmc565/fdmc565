@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="stylesia.css">
 </head>
 <body>
+    <!-- Panel de bienvenida -->
+    <div id="welcome-panel" class="welcome-panel">
+        <div class="panel-content">
+            <p><strong>¡Bienvenido a Karen Beta!</strong></p>
+            <p>Esta es una versión beta, Karen no utiliza IA. Asegúrate de escribir correctamente las palabras y evita oraciones largas. Algunas palabras pueden generar errores si no llevan su respectiva tilde. Gracias por leer.</p>
+            <button onclick="closeWelcomePanel()" class="close-btn">Aceptar</button>
+        </div>
+    </div>
+
     <div class="chat-container">
         <div id="chat-box" class="chat-box">
             <p class="bot-message"><strong>Karen:</strong> ¡Hola! Soy Karen, tu asistente virtual. Pregunta lo que quieras.</p>
@@ -16,6 +25,7 @@
             <button onclick="sendMessage()" class="send-btn">Enviar</button>
         </div>
     </div>
+
     <script src="scriptia.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -31,6 +41,13 @@
                 }
             });
         });
+
+        // Función para cerrar el panel de bienvenida
+        function closeWelcomePanel() {
+            const panel = document.getElementById("welcome-panel");
+            panel.style.display = "none";
+        }
     </script>
 </body>
 </html>
+
