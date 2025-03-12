@@ -5,54 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
         body {
-            background-color: black;
+            background-color: #1a1a2e;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
-        }
-        .player {
-            width: 320px;
-            background: #111;
-            border-radius: 15px;
-            padding: 15px;
-            text-align: center;
             color: white;
             font-family: Arial, sans-serif;
         }
+
+        .player, .game-container {
+            width: 320px;
+            background: #222;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+        }
+
         .cover {
             width: 100%;
             border-radius: 10px;
         }
+
         .song-title {
-            font-size: 18px;
-            margin-top: 10px;
+            font-size: 20px;
             font-weight: bold;
         }
+
         .artist {
             font-size: 14px;
             color: #bbb;
         }
+
         .description {
             font-size: 14px;
-            color: #ff5e5e;
+            color: #ff7b7b;
             margin-top: 10px;
             font-style: italic;
         }
+
         .long-description {
             font-size: 12px;
             color: #ddd;
             margin-top: 10px;
             text-align: justify;
         }
+
         .controls {
             display: flex;
             justify-content: space-around;
             margin-top: 15px;
             align-items: center;
         }
+
         .btn {
             background: none;
             border: none;
@@ -61,20 +72,111 @@
             color: white;
             margin: 0 5px;
         }
-        .btn:focus {
-            outline: none;
+
+        .play-game-btn, .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #6a0dad, #8a2be2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
         }
+
+        .play-game-btn:hover, .back-btn:hover {
+            background: linear-gradient(45deg, #8a2be2, #6a0dad);
+        }
+
+        .game-container {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 500px;
+        }
+
+        .letters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .letter {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: linear-gradient(45deg, #4c3a89, #705ac0);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .letter:hover {
+            background: linear-gradient(45deg, #705ac0, #4c3a89);
+        }
+
+        .dropzone {
+            display: flex;
+            justify-content: center;
+            border: 2px dashed #8a2be2;
+            min-height: 50px;
+            padding: 10px;
+            flex-wrap: wrap;
+            background: #262626;
+            border-radius: 10px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .verify-btn, .restart-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .verify-btn {
+            background: #27ae60;
+        }
+
+        .verify-btn:hover {
+            background: #2ecc71;
+        }
+
+        .restart-btn {
+            background: #e74c3c;
+        }
+
+        .restart-btn:hover {
+            background: #ff6b6b;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="player">
-        <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x424/public/field/image/article/canserbero_02.jpg?itok=2X525z7X" class="cover" alt="Cover">
-        <div class="song-title">Querer Querernos</div>
-        <div class="artist">Fritrs Rei</div>
+    <div class="player" id="player">
+        <img src="https://40.media.tumblr.com/tumblr_m3sdm4VMmZ1qhot6ro1_1280.jpg" class="cover" alt="Cover">
+        <div class="song-title">Aceptas</div>
+        <div class="artist">Canserbero</div>
         <div class="description">Le dedico esta canción a Ivelka porque la amo ❤️</div>
-        <div class="long-description">"Querer Querernos" es una canción que habla sobre el amor sincero y el deseo de estar con alguien sin miedo. Sus letras reflejan la importancia de amarse mutuamente y de luchar por una relación verdadera, sin importar las dificultades. Es un tema que transmite sentimientos profundos y nos recuerda que el amor es una decisión que se toma cada día. ❤️</div>
-        <audio id="audio" src="Canserbero_-_Querer_Querernos_(VersiÃ³n_AcÃºstica)_[_YouConvert.net_].mp3"></audio>
+        <div class="long-description">"Aceptas" es una canción que habla del amor real, con todas sus dificultades y verdades. Canserbero expresa en sus letras cómo el amor verdadero implica aceptar a la otra persona con todo lo bueno y lo malo, comprometiéndose a pesar de los desafíos.</div>
+        <audio id="audio" src="Canserbero - ¿Aceptas_ [Vida] [mP7huH_oKpc].mp3"></audio>
         <div class="controls">
             <button class="btn" onclick="goToStart()">⏮</button>
             <button class="btn" onclick="rewind10()">⏪</button>
@@ -82,6 +184,19 @@
             <button class="btn" onclick="forward10()">⏩</button>
             <button class="btn" onclick="goToEnd()">⏭</button>
         </div>
+        <button class="play-game-btn" onclick="startGame()">Jugar mientras escuchas</button>
+    </div>
+
+    <div class="game-container" id="game">
+        <h2 id="nivel-titulo">Nivel 1</h2>
+        <div class="letters" id="letters"></div>
+        <div class="dropzone" id="dropzone"></div>
+        <div class="action-buttons">
+            <button class="verify-btn" onclick="checkWord()">Verificar</button>
+            <button class="restart-btn" onclick="restartGame()">Reiniciar</button>
+        </div>
+        <p id="result"></p>
+        <button class="back-btn" onclick="backToMusic()">Volver a la música</button>
     </div>
 
     <script>
@@ -98,27 +213,56 @@
             }
         }
 
-        function goToStart() {
-            audio.currentTime = 0;
+        function goToStart() { audio.currentTime = 0; }
+        function rewind10() { audio.currentTime = Math.max(0, audio.currentTime - 10); }
+        function forward10() { audio.currentTime = Math.min(audio.duration, audio.currentTime + 10); }
+        function goToEnd() { audio.currentTime = audio.duration; }
+
+        audio.addEventListener("ended", function() { audio.currentTime = 0; audio.play(); });
+
+        const palabras = ["amor", "verdad", "confianza", "respeto", "lealtad", "paz", "sinceridad", "pasión", "compromiso", "eternidad"];
+        let nivelActual = 0;
+
+        function startGame() {
+            document.getElementById('player').style.display = 'none';
+            document.getElementById('game').style.display = 'block';
+            setupGame();
         }
 
-        function rewind10() {
-            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        function backToMusic() {
+            document.getElementById('game').style.display = 'none';
+            document.getElementById('player').style.display = 'block';
         }
 
-        function forward10() {
-            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        function setupGame() {
+            const palabra = palabras[nivelActual];
+            document.getElementById('nivel-titulo').textContent = `Nivel ${nivelActual + 1}: ${palabra}`;
+            const shuffled = palabra.split('').sort(() => Math.random() - 0.5);
+            const lettersContainer = document.getElementById("letters");
+            const dropzone = document.getElementById("dropzone");
+
+            lettersContainer.innerHTML = '';
+            dropzone.innerHTML = '';
+
+            shuffled.forEach(letter => {
+                const div = document.createElement("div");
+                div.textContent = letter;
+                div.classList.add("letter");
+                div.onclick = () => dropzone.appendChild(div);
+                lettersContainer.appendChild(div);
+            });
         }
 
-        function goToEnd() {
-            audio.currentTime = audio.duration;
+        function checkWord() {
+            nivelActual++;
+            if (nivelActual < palabras.length) {
+                setupGame();
+            } else {
+                alert("¡Felicidades, terminaste todos los niveles!");
+            }
         }
 
-        // 🔄 Repetir automáticamente cuando termine
-        audio.addEventListener("ended", function() {
-            audio.currentTime = 0;
-            audio.play(); // Reproduce automáticamente
-        });
+        function restartGame() { nivelActual = 0; setupGame(); }
     </script>
 
 </body>
